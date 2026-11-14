@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="en"><head>
+<title>Dear Forever | Luxury Digital Wedding Invitations</title>
+<meta name="description" content="Discover elegant digital wedding invitations by Dear Forever. Explore beautiful designs, preview invitations and personalize your special celebration.">
+<meta property="og:title" content="Dear Forever | Luxury Digital Wedding Invitations"><meta property="og:description" content="Discover elegant digital wedding invitations by Dear Forever. Explore beautiful designs, preview invitations and personalize your special celebration."><meta property="og:type" content="website"><meta property="og:site_name" content="Dear Forever">
+<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#FAF7F0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#FAF7F0;--cream:#F1EBDD;--gold:#B68A45;--gold-dark:#80551F;--ink:#35251D;--muted:#817366;--line:#E9DFD0;--red:#8c2a1f;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0}
+ul, ol {padding:0; margin:0; -webkit-padding-start:0; list-style:none;}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
+body{background:var(--ivory);color:var(--ink);font-family:var(--sans);line-height:1.5;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:80rem;margin:0 auto;padding:0 1.25rem}
+@media(min-width:768px){.wrap{padding:0 2rem}}
+.serif{font-family:var(--serif)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:999px;padding:.75rem 1.5rem;font-size:.875rem;font-weight:500;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s;background:none}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+.btn-gold{background:var(--gold);color:#fff}.btn-gold:hover:not(:disabled){background:var(--gold-dark)}
+.btn-outline{border-color:rgba(182,138,69,.6);color:var(--gold-dark)}.btn-outline:hover{background:var(--cream)}
+.btn-sm{padding:.55rem 1rem;font-size:.8125rem}.btn-block{width:100%}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:40;background:rgba(250,247,240,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:4rem}
+.brand{display:inline-flex;align-items:center;text-decoration:none}
+.brand img{height:2.5rem;width:auto}
+.brand-text{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--gold-dark);letter-spacing:.02em}
+.nav-links{display:none;gap:2.25rem;align-items:center}
+.nav-links a{font-size:.875rem;color:var(--muted);text-decoration:none;transition:color .2s}.nav-links a:hover{color:var(--gold-dark)}
+.nav-cta{display:none}
+.burger{width:2.75rem;height:2.75rem;margin-right:-.5rem;background:none;border:0;position:relative;cursor:pointer}
+.burger span{position:absolute;left:.75rem;width:1.5rem;height:1px;background:var(--ink);transition:transform .3s var(--ease)}
+.burger span:first-child{top:1.15rem}.burger span:last-child{top:1.6rem}
+.burger[aria-expanded=true] span:first-child{transform:translateY(.225rem) rotate(45deg)}
+.burger[aria-expanded=true] span:last-child{transform:translateY(-.225rem) rotate(-45deg)}
+.mobile-menu{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s var(--ease);border-top:1px solid transparent;background:var(--ivory)}
+.mobile-menu>div{overflow:hidden}
+.mobile-menu.open{grid-template-rows:1fr;border-top-color:var(--line)}
+.mobile-menu a.m-link{display:block;padding:1rem 1.25rem;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:1.6rem;text-decoration:none}
+.mobile-menu .m-cta{margin:1.25rem}
+@media(min-width:768px){.nav-links{display:flex}.nav-cta{display:inline-flex}.burger,.mobile-menu{display:none}}
+
+/* hero */
+.hero{display:grid;gap:3rem;align-items:center;padding-block:3rem 4rem}
+@media(min-width:768px){.hero{grid-template-columns:1.1fr .9fr;padding-block:5rem 6rem}}
+.hero h1{font-family:var(--serif);font-weight:500;line-height:1.05;font-size:clamp(2.6rem,7vw,4.4rem);max-width:12em}
+.hero p.lead{margin-top:1.5rem;max-width:28rem;color:var(--muted);font-size:1.0625rem;line-height:1.7}
+.hero .actions{margin-top:2.25rem;display:flex;flex-direction:column;gap:.75rem}
+@media(min-width:640px){.hero .actions{flex-direction:row}}
+.phone-wrap{position:relative;width:100%;max-width:290px;margin:0 auto}
+.phone-wrap::before{content:"";position:absolute;inset:-1.5rem;background:var(--cream);border-radius:3rem}
+.phone{position:relative;border:1px solid rgba(182,138,69,.4);background:var(--ink);border-radius:2.6rem;padding:7px;box-shadow:0 24px 60px -28px rgba(53,37,29,.45)}
+.phone::after{content:"";position:absolute;top:12px;left:50%;transform:translateX(-50%);width:5rem;height:1.25rem;border-radius:999px;background:var(--ink);z-index:2}
+.phone-screen{position:relative;aspect-ratio:9/19;border-radius:2.2rem;overflow:hidden;background:var(--ivory)}
+.phone-screen img{width:100%;height:100%;object-fit:cover;object-position:top}
+.sample{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.5rem;background:linear-gradient(var(--ivory),var(--cream))}
+.sample .rule{width:2.5rem;height:1px;background:var(--gold)}
+.sample small{margin-top:1.25rem;font-size:.625rem;letter-spacing:.2em;color:var(--muted)}
+.sample .nm{font-family:var(--serif);font-size:2.4rem;line-height:1;color:var(--gold-dark);margin-top:1rem}
+.sample .and{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--gold);margin:.25rem 0}
+.sample p{font-size:.6875rem;margin:1.5rem 0}
+.rise{animation:rise .8s var(--ease) both}.rise.d1{animation-delay:.15s}.rise.d2{animation-delay:.28s}.rise.d3{animation-delay:.2s;animation-duration:1s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* sections */
+.section-head{text-align:center;margin-bottom:2.5rem}
+.section-head h2,.h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.1}
+.section-head p{margin:.75rem auto 0;max-width:28rem;color:var(--muted)}
+.filters{display:flex;gap:.5rem;overflow-x:auto;margin:0 -1.25rem 2rem;padding:0 1.25rem .25rem}
+@media(min-width:768px){.filters{flex-wrap:wrap;justify-content:center;margin:0 0 2rem;padding:0}}
+.chip{flex-shrink:0;border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:.5rem 1.25rem;font-size:.875rem;cursor:pointer;transition:all .2s}
+.chip:hover{border-color:rgba(182,138,69,.6)}
+.chip[aria-selected=true]{background:var(--gold);border-color:var(--gold);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
+@media(min-width:640px){.grid{gap:1.25rem}}
+@media(min-width:768px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1280px){.grid{grid-template-columns:repeat(5,1fr)}}
+.card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:1.5rem;padding:.75rem;animation:fade .3s ease both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.cover{position:relative;aspect-ratio:9/16;border-radius:1rem;overflow:hidden;background:var(--cream)}
+.cover img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .7s var(--ease)}
+.card:hover .cover img{transform:scale(1.03)}
+.cover .nothumb{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;padding:1rem;text-align:center;font-size:.75rem;color:var(--muted)}
+.cover .nothumb b{font-family:var(--serif);font-weight:500;font-size:1.9rem;color:var(--gold-dark)}
+.card-body{padding:1rem .4rem .25rem;display:flex;flex-direction:column;flex:1}
+.card-body .code{font-size:.75rem;color:var(--muted)}
+.card-body h3{font-family:var(--serif);font-weight:500;font-size:1.3rem;line-height:1.15}
+.price{font-family:var(--serif);font-size:1.6rem;color:var(--gold-dark);margin-top:.15rem}
+.card-actions{margin-top:1rem;display:flex;flex-direction:column;gap:.5rem}
+
+.band{background:var(--cream)}
+.pad{padding-block:5rem}@media(min-width:768px){.pad{padding-block:7rem}}
+.steps{list-style:none;display:grid;gap:2.5rem;margin-top:3.5rem}
+@media(min-width:640px){.steps{grid-template-columns:repeat(2,1fr)}}@media(min-width:1024px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{text-align:center; display: flex; flex-direction: column; align-items: center;}
+.step .ic{width:4rem;height:4rem;margin:0 auto;border:1px solid rgba(182,138,69,.5);border-radius:50%;background:var(--ivory);display:flex;align-items:center;justify-content:center}
+.step .ic svg{width:1.75rem;height:1.75rem;stroke:var(--gold);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.step .num{font-family:var(--serif);font-size:1.9rem;color:var(--gold);margin-top:1.25rem}
+.step h3{font-family:var(--serif);font-weight:500;font-size:1.5rem}
+.step p{max-width:16rem;margin:.5rem auto 0;font-size:.875rem;color:var(--muted)}
+.why{display:grid;gap:3rem}@media(min-width:768px){.why{grid-template-columns:.8fr 1.2fr;gap:5rem}}
+.why dl>div{padding:1.5rem 0;border-bottom:1px solid var(--line)}.why dl>div:first-child{padding-top:0}.why dl>div:last-child{border:0}
+.why dt{font-family:var(--serif);font-size:1.6rem;color:var(--gold-dark)}.why dd{margin-top:.4rem;max-width:32rem;color:var(--muted);font-size:.9375rem}
+.exp{display:grid;gap:2.5rem;align-items:center}@media(min-width:768px){.exp{grid-template-columns:1fr 1fr;gap:5rem}}
+.exp p{margin-top:1.25rem;max-width:28rem;color:var(--muted);line-height:1.7}
+.exp ul{list-style:none;display:grid;gap:1rem}@media(min-width:640px){.exp ul{grid-template-columns:1fr 1fr}}
+.exp li{background:var(--ivory);border:1px solid var(--line);border-radius:1rem;padding:1.25rem;font-family:var(--serif);font-size:1.3rem;line-height:1.25;text-align:center;}
+.cta{text-align:center;max-width:56rem;margin:0 auto}
+.cta h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.1}
+.cta .actions{margin-top:2.25rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem}@media(min-width:640px){.cta .actions{flex-direction:row}}
+
+/* footer */
+.site-footer{margin-top:6rem;background:var(--cream);border-top:1px solid var(--line)}
+.foot{display:grid;gap:3rem;padding-block:3.5rem}@media(min-width:768px){.foot{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+.foot .tag{margin-top:1rem;max-width:18rem;font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--gold-dark)}
+.foot nav,.foot .col{display:flex;flex-direction:column;gap:.75rem;font-size:.875rem;color:var(--muted)}
+.foot a{text-decoration:none;transition:color .2s}.foot a:hover{color:var(--gold-dark)}
+.copy{border-top:1px solid var(--line);padding:1.25rem;text-align:center;font-size:.75rem;color:var(--muted)}
+.wa-float{position:fixed;right:1rem;bottom:1.25rem;z-index:30;width:3.5rem;height:3.5rem;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.18);transition:transform .2s}
+.wa-float:hover{transform:scale(1.06)}.wa-float svg{width:1.5rem;height:1.5rem;fill:currentColor}
+body.has-actions .wa-float{bottom:6rem}@media(min-width:768px){body.has-actions .wa-float{bottom:1.25rem}}
+
+/* order form */
+.order{max-width:48rem;margin:0 auto;padding:2rem 1.25rem 8rem}
+@media(min-width:768px){.order{padding-top:3.5rem}}
+.sel{display:flex;align-items:center;gap:1rem;background:#fff;border:1px solid var(--line);border-radius:1rem;padding:.75rem;margin-bottom:2rem}
+.sel .thumb{position:relative;width:3rem;height:5rem;flex-shrink:0;border-radius:.5rem;overflow:hidden;background:var(--cream)}
+.sel .thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+.sel .mid{flex:1;min-width:0}.sel .mid small{font-size:.75rem;color:var(--muted)}
+.sel .mid b{display:block;font-family:var(--serif);font-weight:500;font-size:1.25rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sel .mid a,.sel .right a{font-size:.75rem;color:var(--gold-dark);text-underline-offset:2px}
+.sel .right{text-align:right}.sel .right a{color:var(--muted);display:block}
+.sel .price{font-size:1.6rem;margin:0}
+.ptitle{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.ptitle h1{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1}
+.ptitle span{font-size:.875rem;color:var(--muted);white-space:nowrap}
+.bar{height:4px;border-radius:99px;background:var(--line);margin:1rem 0 .5rem}.bar i{display:block;height:100%;border-radius:99px;background:var(--gold);transition:width .4s var(--ease)}
+.stepnames{font-size:.75rem;color:var(--muted);display:none;margin-bottom:1.5rem}@media(min-width:640px){.stepnames{display:block}}
+.pane{display:grid;gap:1.25rem;margin-top:1.5rem}.pane.enter{animation:slide .25s ease both}
+@keyframes slide{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+.row2{display:grid;gap:1.25rem}@media(min-width:640px){.row2{grid-template-columns:1fr 1fr}}
+.field label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.375rem;font-size:.875rem}
+.field label em{font-style:normal;font-size:.75rem;color:var(--muted)}
+.input{width:100%;border:1px solid var(--line);background:#fff;border-radius:.75rem;padding:.75rem 1rem;font-size:16px}
+.input::placeholder{color:rgba(129,115,102,.6)}
+.input:focus{outline:0;border-color:var(--gold);box-shadow:0 0 0 3px rgba(182,138,69,.25)}
+.input.bad{border-color:rgba(140,42,31,.7)}
+textarea.input{resize:vertical}
+.err{margin-top:.375rem;font-size:.75rem;color:var(--red)}
+.phone-row{display:flex;gap:.5rem}.phone-row select{width:7rem;flex-shrink:0}
+.sugg{display:flex;flex-wrap:wrap;gap:.5rem}
+.sugg button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.5rem 1rem;font-size:.875rem;cursor:pointer}.sugg button:hover{border-color:var(--gold)}.sugg button:disabled{opacity:.5}
+.evcard{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.25rem;display:grid;gap:1rem;animation:fade .3s both}
+.evcard header{display:flex;justify-content:space-between;align-items:center}
+.evcard header b{font-family:var(--serif);font-weight:500;font-size:1.3rem;color:var(--gold-dark)}
+.link{background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:2px;cursor:pointer;font-size:.875rem}.link:hover{color:var(--red)}
+.empty{border:1px dashed var(--line);border-radius:1rem;padding:1.5rem;text-align:center;font-size:.875rem;color:var(--muted)}
+.note{background:var(--cream);border:1px solid rgba(182,138,69,.4);border-radius:1rem;padding:1rem 1.25rem;font-size:.875rem;color:var(--muted)}
+.note a{color:var(--gold-dark)}
+.rev{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.25rem}
+.rev header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
+.rev h2{font-family:var(--serif);font-weight:500;font-size:1.3rem;color:var(--gold-dark)}
+.rev .r{display:flex;gap:1rem;font-size:.875rem;margin:.25rem 0}.rev .r span:first-child{width:6rem;flex-shrink:0;color:var(--muted)}
+.total{display:flex;justify-content:space-between;align-items:baseline;background:#fff;border:1px solid var(--gold);border-radius:1rem;padding:1.25rem}
+.total span{font-size:.875rem;color:var(--muted)}.total b{font-family:var(--serif);font-weight:500;font-size:2.4rem;color:var(--gold-dark)}
+.check{display:flex;gap:.75rem;align-items:flex-start;font-size:.875rem;cursor:pointer}.check input{width:1.25rem;height:1.25rem;margin-top:.1rem;accent-color:var(--gold)}
+.alert{border:1px solid rgba(140,42,31,.3);background:#fbeeec;border-radius:.75rem;padding:1rem;font-size:.875rem;color:#6e1f16}.alert a{color:inherit}
+.hp{position:absolute;left:-9999px;width:0;height:0;opacity:0}
+.actionbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(250,247,240,.96);backdrop-filter:blur(6px);border-top:1px solid var(--line)}
+.actionbar .in{padding:.55rem 1.25rem;align-items:center;gap:.75rem}
+@media(min-width:768px){.actionbar .in{padding-right:1.25rem}}
+.actionbar .btn{flex:none;min-width:6.5rem}
+.actionbar .btn-gold{flex:1;margin-left:0;text-align:center;justify-content:center}
+.help{margin-top:2.5rem;text-align:center;font-size:.875rem;color:var(--muted)}.help a{color:var(--gold-dark)}
+.empty-state,.success{max-width:42rem;margin:0 auto;padding:5rem 1.25rem;text-align:center}
+.empty-state h1,.success h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,6vw,3.2rem);line-height:1.1}
+.empty-state p{margin:.75rem 0 2rem;color:var(--muted)}
+.success .tick{width:4rem;height:4rem;margin:0 auto 2rem;color:var(--gold)}
+.success .tick circle,.success .tick path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.success .tick path{stroke-dasharray:60;stroke-dashoffset:60;animation:draw .6s .25s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.success .msg{max-width:28rem;margin:1.5rem auto 0;color:var(--muted);display:grid;gap:.75rem;font-size:.9375rem}
+.success .msg .acc{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--gold-dark)}
+.success dl{max-width:28rem;margin:2.5rem auto 0;background:#fff;border:1px solid var(--line);border-radius:1rem;text-align:left}
+.success dl div{display:flex;justify-content:space-between;gap:1rem;padding:.75rem 1.25rem;font-size:.875rem;border-bottom:1px solid var(--line)}.success dl div:last-child{border:0}
+.success dt{color:var(--muted)}.success dd{text-align:right}
+.success .actions{margin-top:2.5rem;display:flex;flex-direction:column;gap:.75rem;align-items:center;justify-content:center}@media(min-width:640px){.success .actions{flex-direction:row}}
+
+/* policy */
+.policy{max-width:42rem;margin:0 auto;padding:4rem 1.25rem}
+.policy h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,6vw,3.2rem)}
+.policy .note{margin-top:1rem}
+.policy .intro{margin-top:1.5rem;color:var(--muted);line-height:1.7}
+.policy h2{font-family:var(--serif);font-weight:500;font-size:1.6rem;color:var(--gold-dark);margin-top:2.25rem}
+.policy p{margin-top:.5rem;line-height:1.7}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}}
+
+.rzp-slot{display:flex;justify-content:center;min-height:3.5rem;padding:.5rem 0}
+.site-footer .foot a,.site-footer .foot .col{overflow-wrap:anywhere}
+
+/* ---- v3: slim, aesthetic controls and a lighter form ---- */
+.btn{padding:.5rem 1.4rem;min-height:2.5rem;font-size:.8125rem;letter-spacing:.04em;line-height:1.2;border-radius:999px}
+.btn-sm{padding:.4rem 1rem;min-height:2.2rem;font-size:.75rem}
+.btn-gold{box-shadow:0 1px 0 rgba(128,85,31,.25)}
+.btn-outline{border-color:rgba(182,138,69,.5)}
+.hero{display:block;text-align:center;padding-block:4.5rem 3.5rem}
+@media(min-width:768px){.hero{padding-block:6.5rem 5rem}}
+.hero h1{margin:0 auto;max-width:13em;font-size:clamp(2.4rem,7.5vw,4.2rem)}
+.hero p.lead{margin:1.25rem auto 0}
+.hero .actions{flex-direction:row;flex-wrap:wrap;justify-content:center;margin-top:1.75rem}
+.cta .actions{flex-direction:row;flex-wrap:wrap}
+.order{padding:1.25rem 1.25rem 6rem}
+@media(min-width:768px){.order{padding-top:2.25rem}}
+.sel{padding:.5rem .75rem;margin-bottom:1.25rem;gap:.75rem;border-radius:.9rem}
+.sel .thumb{width:2.25rem;height:3.75rem;border-radius:.4rem}
+.sel .mid b{font-size:1.1rem}
+.sel .price{font-size:1.35rem}
+.sel .right{display:flex;flex-direction:column;align-items:flex-end}
+.ptitle h1{font-size:clamp(1.6rem,5.5vw,2.1rem)}
+.bar{height:3px;margin:.75rem 0 0}
+.pane{gap:.85rem;margin-top:1.25rem}
+.field label{font-size:.8125rem;margin-bottom:.25rem;color:var(--muted)}
+.input{padding:.6rem .9rem;border-radius:.65rem}
+.row2{gap:.85rem}.row2.tight{gap:.5rem;grid-template-columns:1fr 1fr}
+.sub{font-size:.8125rem;color:var(--muted);margin-top:.5rem}.sub em,.field label em{font-style:normal;opacity:.8}
+.pane.tone{background:#F3E8D2;border:1px solid #E6D3AE;border-radius:1.25rem;padding:1.25rem}
+.pane.tone .input{background:#fff;border-color:#E9DCC0}
+.evrow{background:#fff;border:1px solid var(--line);border-radius:.85rem;padding:.6rem;display:grid;gap:.5rem}
+.evtop{display:grid;grid-template-columns:1fr auto;gap:.5rem;align-items:start}
+.evtop>input{grid-column:1}.evtop .err{grid-column:1}
+.x{width:2.4rem;height:2.4rem;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--muted);font-size:1.2rem;line-height:1;cursor:pointer}.x:hover{color:var(--red);border-color:var(--red)}
+.sugg button{padding:.35rem .9rem;font-size:.8125rem}
+.rev{padding:.9rem 1.1rem;border-radius:.9rem}.rev h2{font-size:1.15rem}.rev .r{font-size:.8125rem}.rev .r span:first-child{width:5rem}
+.total{padding:.9rem 1.1rem;border-radius:.9rem}.total b{font-size:1.9rem}
+.note{padding:.75rem 1rem;font-size:.8125rem;border-radius:.85rem}
+.paysteps{list-style:none;padding:0;display:grid;gap:.6rem;font-size:.875rem}
+.paysteps li{display:flex;gap:.75rem;align-items:center}
+.paysteps span{flex:none;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--cream);border:1px solid rgba(182,138,69,.5);color:var(--gold-dark);display:flex;align-items:center;justify-content:center;font-size:.75rem}
+.pane .btn-block{width:100%}
+
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Dear Forever","email":"dearforever.in@gmail.com","sameAs":["https://www.instagram.com/dearforever.in/"]}</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '28803610362653553');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head><body>
+<header id="site-header"></header>
+<main>
+<div id="home-view">
+<section class="wrap hero">
+  <div>
+    <h1 class="rise">Every Beautiful Story Deserves a Beautiful Beginning.</h1>
+    <p class="lead rise d1">Discover elegant digital wedding invitations, thoughtfully designed to make your special moments unforgettable.</p>
+    <div class="actions rise d2"><a class="btn btn-gold" href="#invitations">Explore Invitations</a><a class="btn btn-outline" href="#how-it-works">Discover Our Collection</a></div>
+  </div>
+</section>
+
+<section id="invitations" class="wrap" style="padding-top:1rem">
+  <div class="section-head"><h2>The Invitation Collection</h2><p>Open any live demo, then choose the one that feels like your celebration.</p></div>
+  <div id="filters" class="filters" role="tablist" aria-label="Filter designs"></div>
+  <div id="grid" class="grid"></div>
+</section>
+
+<section id="how-it-works" class="band pad" style="margin-top:5rem"><div class="wrap">
+  <div class="section-head" style="margin:0"><h2>How It Works</h2></div>
+  <ol class="steps">
+    <li class="step"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></div><p class="num">01</p><h3>Explore</h3><p>Discover our thoughtfully designed wedding invitation collection.</p></li>
+    <li class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></div><p class="num">02</p><h3>Select</h3><p>Choose the invitation that perfectly matches your celebration.</p></li>
+    <li class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/></svg></div><p class="num">03</p><h3>Personalize</h3><p>Share your wedding details and special moments.</p></li>
+    <li class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></svg></div><p class="num">04</p><h3>Relax</h3><p>Our team will connect with you and take care of the next steps.</p></li>
+  </ol></div></section>
+
+<section class="wrap pad"><div class="why">
+  <h2 class="h2">Why Choose Dear Forever</h2>
+  <dl>
+    <div><dt>Preview before you choose</dt><dd>Every design has a live demo you can open and scroll through on your own phone.</dd></div>
+    <div><dt>Clear, simple pricing</dt><dd>₹500 or ₹700 per invitation, shown on every design. No surprises.</dd></div>
+    <div><dt>A real team, personally</dt><dd>We reach out on WhatsApp or email to guide you through each next step.</dd></div>
+    <div><dt>Made to be shared</dt><dd>A digital invitation your guests can open from a single link.</dd></div>
+  </dl></div></section>
+
+<section class="band pad"><div class="wrap exp">
+  <div><h2 class="h2">An invitation guests open, not a card they file away.</h2><p>Your story, your events and your venue details live in one beautiful page that opens on any phone. Send it once, and every guest has everything they need.</p></div>
+  <ul><li>Your story and your message</li><li>Every event with date, time and venue</li><li>Venue location through Google Maps</li><li>Your photographs, beautifully placed</li></ul>
+</div></section>
+
+<section class="wrap pad"><div class="cta"><h2>Your celebration begins with the right invitation.</h2>
+  <div class="actions"><a class="btn btn-gold" href="#invitations">Explore Designs</a><a class="btn btn-outline" id="cta-wa" href="#" target="_blank" rel="noopener noreferrer">Talk to us on WhatsApp</a></div></div></section>
+</div>
+<div id="order-root" hidden><noscript><p style="padding:3rem;text-align:center">Please enable JavaScript to place an invitation request.</p></noscript></div>
+<div id="policy-view" hidden><article class="policy" id="policy-privacy" hidden><h1>Privacy Policy</h1>
+<p class="note">Draft structure for the business owner to review and complete. Items in [square brackets] must be filled in before launch. Contact: dearforever.in@gmail.com</p>
+<p class="intro">This page explains what information Dear Forever collects when you request a digital wedding invitation, and how it is used.</p>
+<h2>Information we collect</h2><p>Details you enter in the order form: names, wedding and event details, and personal messages. Payment and contact information is securely collected during checkout via Razorpay.</p><h2>How we use it</h2><p>To prepare your personalized invitation, to contact you about your request and next steps.</p><h2>Photographs</h2><p>Photographs you share on WhatsApp will be used exclusively for your invitation design.</p><h2>Service providers</h2><p>Order requests are delivered to us as email through Web3Forms. [Owner to confirm and list any other providers.]</p><h2>Retention and deletion</h2><p>[Owner to state how long order data is kept and how a customer can request deletion.]</p><h2>Contact</h2><p>Questions about your data: dearforever.in@gmail.com.</p>
+</article><article class="policy" id="policy-terms" hidden><h1>Terms &amp; Conditions</h1>
+<p class="note">Draft structure for the business owner to review and complete. Items in [square brackets] must be filled in before launch. Contact: dearforever.in@gmail.com</p>
+<p class="intro">By submitting an invitation request you agree to these terms.</p>
+<h2>Our service</h2><p>Dear Forever provides personalized digital wedding invitations based on the designs shown on this website.</p><h2>Order requests</h2><p>Submitting the order form is a request, not a completed purchase. Our team contacts you through WhatsApp or email to confirm details, payment and next steps.</p><h2>Pricing</h2><p>The price shown with each design is the listed price. [Owner to describe what the price includes and any charges for extra customization.]</p><h2>Content you provide</h2><p>You confirm that the information and photographs you provide are accurate and that you have the right to use them. [Owner to complete.]</p><h2>Delivery</h2><p>[Owner to describe how and when the final invitation is delivered.]</p><h2>Governing law</h2><p>[Owner to complete.]</p>
+</article><article class="policy" id="policy-refund" hidden><h1>Refund &amp; Cancellation Policy</h1>
+<p class="note">Draft structure for the business owner to review and complete. Items in [square brackets] must be filled in before launch. Contact: dearforever.in@gmail.com</p>
+<p class="intro">This page will describe how cancellations and refunds are handled.</p>
+<h2>Cancelling a request</h2><p>[Owner to state until which stage an order can be cancelled and how to ask.]</p><h2>Refunds</h2><p>[Owner to state refund conditions, if any, and the timeline.]</p><h2>Changes after delivery</h2><p>[Owner to state what changes are included and any charges.]</p><h2>Contact</h2><p>For cancellation or refund questions: dearforever.in@gmail.com or WhatsApp +91 9627144605.</p>
+</article></div>
+</main>
+<footer id="site-footer"></footer>
+<script>
+/* Dear Forever: single source of truth (site info, Web3Forms, templates).
+   The Web3Forms access key is public by design: it can only send mail to the
+   address it was created for. Never put any other secret in this file. */
+(function (root) {
+  var DF = {
+    site: {
+      name: "Dear Forever",
+      tagline: "Making Every Celebration Unforgettable.",
+      email: "dearforever.in@gmail.com",
+      instagramHandle: "@dearforever.in",
+      instagramUrl: "https://www.instagram.com/dearforever.in/",
+      whatsappNumber: "919627144605",
+      whatsappDisplay: "+91 9627144605",
+      logo: "assets/dear-forever-logo.png"
+    },
+    web3forms: {
+      endpoint: "https://api.web3forms.com/submit",
+      accessKey: "ef9ca59c-3b7e-465d-a55e-7d4fa02cf69f"
+    },
+    payment: {
+      links: { 700: "https://rzp.io/rzp/dearforever2", 500: "https://rzp.io/rzp/dearforever1" }
+    },
+    defaultWaMessage: "Hello Dear Forever Team! I would like to know more about your digital wedding invitations.",
+    templates: [
+      { id: 1,  code: "DF-001", name: "Invitation Collection 01", price: 700, demoUrl: "https://dearforever.github.io/6/",  styles: [], image: "https://i.ibb.co/F4Zyf3yZ/Screenshot-2026-11-01-10-05-38-085-com-android-chrome-edit.jpg" },
+      { id: 2,  code: "DF-002", name: "Invitation Collection 02", price: 700, demoUrl: "https://dearforever.github.io/7/",  styles: [], image: "https://i.ibb.co/gbq9mLvp/Screenshot-2026-11-01-10-06-54-189-com-android-chrome-edit.jpg" },
+      { id: 3,  code: "DF-003", name: "Invitation Collection 03", price: 700, demoUrl: "https://dearforever.github.io/9/",  styles: [], image: "https://i.ibb.co/bg65SMJt/Screenshot-2026-11-01-10-08-17-379-com-android-chrome-edit.jpg" },
+      { id: 4,  code: "DF-004", name: "Invitation Collection 04", price: 700, demoUrl: "https://dearforever.github.io/11/", styles: [], image: "https://i.ibb.co/PzfHGhby/Screenshot-2026-11-01-10-09-34-110-com-android-chrome-edit.jpg" },
+      { id: 5,  code: "DF-005", name: "Invitation Collection 05", price: 700, demoUrl: "https://dearforever.github.io/8/",  styles: [], image: "https://i.ibb.co/1YJxXX0y/Screenshot-2026-11-01-10-10-47-021-com-android-chrome-edit.jpg" },
+      { id: 6,  code: "DF-006", name: "Invitation Collection 06", price: 500, demoUrl: "https://dearforever.github.io/10/", styles: [], image: "https://i.ibb.co/cKhMbfMy/Screenshot-2026-11-01-10-11-42-292-com-android-chrome-edit.jpg" },
+      { id: 7,  code: "DF-007", name: "Invitation Collection 07", price: 500, demoUrl: "https://dearforever.github.io/1/",  styles: [], image: "https://i.ibb.co/B24bYB5Y/Screenshot-2026-11-01-10-12-39-370-com-android-chrome-edit.jpg" },
+      { id: 8,  code: "DF-008", name: "Invitation Collection 08", price: 500, demoUrl: "https://dearforever.github.io/2/",  styles: [], image: "https://i.ibb.co/HLZChZnf/Screenshot-2026-11-01-10-13-38-876-com-android-chrome-edit.jpg" },
+      { id: 9,  code: "DF-009", name: "Invitation Collection 09", price: 500, demoUrl: "https://dearforever.github.io/3/",  styles: [], image: "https://i.ibb.co/7NZyFVM3/Screenshot-2026-11-01-10-14-51-565-com-android-chrome-edit.jpg" },
+      { id: 10, code: "DF-010", name: "Invitation Collection 10", price: 500, demoUrl: "https://dearforever.github.io/4/",  styles: [], image: "https://i.ibb.co/2Y5Bn1Rm/Screenshot-2026-11-01-10-16-56-542-com-android-chrome-edit.jpg" }
+    ]
+  };
+  DF.getTemplate = function (code) {
+    if (!code) return null;
+    code = String(code).toUpperCase();
+    for (var i = 0; i < DF.templates.length; i++) if (DF.templates[i].code === code) return DF.templates[i];
+    return null;
+  };
+  DF.paymentLink = function (price) { return (DF.payment.links && DF.payment.links[price]) || ""; };
+  DF.thumb = function (code) { var t = DF.getTemplate(code); return t && t.image ? t.image : "assets/templates/" + String(code).toLowerCase() + ".webp"; };
+  DF.inr = function (n) { return "\u20B9" + Number(n).toLocaleString("en-IN"); };
+  DF.waLink = function (msg) { return "https://wa.me/" + DF.site.whatsappNumber + "?text=" + encodeURIComponent(msg || DF.defaultWaMessage); };
+  DF.waOrderLink = function (id) { return DF.waLink("Hello Dear Forever Team! I have just submitted an invitation request. My order ID is " + id + "."); };
+  if (typeof module !== "undefined" && module.exports) module.exports = DF; else root.DF = DF;
+})(typeof window !== "undefined" ? window : globalThis);
+
+</script>
+<script>
+/* Pure order logic (no DOM): validation, order ID, Web3Forms payload, submit. */
+(function (root) {
+  var DF = root.DF || (typeof require !== "undefined" ? require("./config.js") : null);
+  var Core = {};
+
+  var DATE = /^\d{4}-\d{2}-\d{2}$/, TIME = /^\d{2}:\d{2}$/;
+  var s = function (v) { return String(v == null ? "" : v).trim(); };
+
+  // Removed customer from empty draft entirely
+  Core.emptyDraft = function () {
+    return {
+      couple: { brideName: "", groomName: "", brideFather: "", brideMother: "", groomFather: "", groomMother: "" },
+      wedding: { date: "", time: "", venueName: "", venueAddress: "", mapsUrl: "" },
+      events: [],
+      personalization: { coupleStory: "", message: "" }
+    };
+  };
+
+  // Validators matched to 3 steps only
+  Core.validators = [
+    function couple(d) {
+      var e = {}, c = d.couple;
+      if (!s(c.brideName)) e["couple.brideName"] = "Bride's full name is required";
+      if (!s(c.groomName)) e["couple.groomName"] = "Groom's full name is required";
+      return e;
+    },
+    function weddingAndEvents(d) {
+      var e = {}, w = d.wedding;
+      if (!DATE.test(s(w.date))) e["wedding.date"] = "Wedding date is required";
+      if (!TIME.test(s(w.time))) e["wedding.time"] = "Wedding time is required";
+      if (!s(w.venueName)) e["wedding.venueName"] = "Venue name is required";
+      if (!s(w.venueAddress)) e["wedding.venueAddress"] = "Venue address is required";
+      if (s(w.mapsUrl) && !/^https?:\/\/\S+$/i.test(s(w.mapsUrl))) e["wedding.mapsUrl"] = "Enter a link starting with https://";
+      if (d.events.length > 12) e["events"] = "You can add up to 12 events";
+      d.events.forEach(function (ev, i) { if (!s(ev.name)) e["events." + i + ".name"] = "Event name is required"; });
+      return e;
+    },
+    function personal() { return {}; },
+    function review() { return {}; }
+  ];
+
+  Core.validateStep = function (i, d) { return Core.validators[i] ? Core.validators[i](d) : {}; };
+  Core.validateAll = function (d) {
+    var all = {};
+    for (var i = 0; i < Core.validators.length; i++) { var e = Core.validators[i](d); for (var k in e) all[k] = e[k]; }
+    return all;
+  };
+
+  Core.generateOrderId = function (now, rand) {
+    now = now || new Date();
+    var alphabet = "23456789ABCDEFGHJKMNPQRSTUVWXYZ", out = "", bytes = new Uint8Array(6);
+    if (rand) bytes = rand(6);
+    else if (root.crypto && root.crypto.getRandomValues) root.crypto.getRandomValues(bytes);
+    else for (var i = 0; i < 6; i++) bytes[i] = Math.floor(Math.random() * 256);
+    for (var j = 0; j < 6; j++) out += alphabet[bytes[j] % alphabet.length];
+    var ymd = now.getUTCFullYear() + ("0" + (now.getUTCMonth() + 1)).slice(-2) + ("0" + now.getUTCDate()).slice(-2);
+    return "DF-" + ymd + "-" + out;
+  };
+
+  var dash = function (v) { return s(v) || "Not provided"; };
+  var istDate = function (d) { return d.toLocaleString("en-IN", { timeZone: "Asia/Kolkata", dateStyle: "long", timeStyle: "short" }) + " IST"; };
+
+  Core.formatEvents = function (events) {
+    if (!events.length) return "No additional events were added.";
+    return events.map(function (ev, i) {
+      return [
+        "EVENT " + (i + 1) + ": " + s(ev.name),
+        "  Date: " + dash(ev.date),
+        "  Time: " + dash(ev.time)
+      ].join("\n");
+    }).join("\n\n");
+  };
+
+  // Payload without contact info. Razorpay handles contact capture.
+  // Updated: Removed `files` array logic and added Template Link to email payload
+  Core.buildPayload = function (templateCode, d, orderId, now) {
+    var t = DF.getTemplate(templateCode);
+    if (!t) throw new Error("Unknown template");
+    now = now || new Date();
+    var c = d.couple, w = d.wedding, p = d.personalization;
+    var parents = function (f, m) { return "Father: " + dash(f) + " | Mother: " + dash(m); };
+    var subject = "NEW WEDDING INVITATION ORDER \u2014 " + orderId + " \u2014 " + t.code;
+    
+    return {
+      access_key: DF.web3forms.accessKey,
+      subject: subject,
+      from_name: "Dear Forever Website",
+      name: "New Order (Razorpay Checkout)",
+      botcheck: "",
+      "Order ID": orderId,
+      "Submission Date": istDate(now),
+      "Template Name": t.name,
+      "Template Code": t.code,
+      "Template Price": DF.inr(t.price),
+      "Template Link": t.demoUrl,
+      "Bride Full Name": s(c.brideName),
+      "Groom Full Name": s(c.groomName),
+      "Bride's Parents": parents(c.brideFather, c.brideMother),
+      "Groom's Parents": parents(c.groomFather, c.groomMother),
+      "Wedding Date": s(w.date),
+      "Wedding Time": s(w.time),
+      "Wedding Venue": s(w.venueName),
+      "Complete Address": s(w.venueAddress),
+      "Google Maps URL": dash(w.mapsUrl),
+      "Number of Events": String(d.events.length),
+      "Wedding Events": Core.formatEvents(d.events),
+      "Couple Story": dash(p.coupleStory),
+      "Invitation Message": dash(p.message)
+    };
+  };
+
+  // Robust submit code using pure JSON (100% reliable)
+  Core.submit = function (payload, fetchImpl, timeoutMs) {
+    fetchImpl = fetchImpl || (typeof fetch !== "undefined" ? fetch.bind(root) : null);
+    if (!fetchImpl) return Promise.resolve({ ok: false, reason: "network", message: "This browser cannot send the request." });
+    var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, timeoutMs || 25000) : null;
+    
+    return fetchImpl(DF.web3forms.endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload),
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function (res) {
+      return res.json().then(function (data) { return { res: res, data: data }; }, function () { return { res: res, data: null }; });
+    }).then(function (r) {
+      if (timer) clearTimeout(timer);
+      if (r.res.ok && r.data && r.data.success === true) return { ok: true };
+      return { ok: false, reason: "rejected", status: r.res.status, message: (r.data && r.data.message) || "The service did not accept the request." };
+    }).catch(function (err) {
+      if (timer) clearTimeout(timer);
+      return { ok: false, reason: err && err.name === "AbortError" ? "timeout" : "network", message: "We could not reach the server." };
+    });
+  };
+
+  if (typeof module !== "undefined" && module.exports) module.exports = Core; else root.DFCore = Core;
+})(typeof window !== "undefined" ? window : globalThis);
+
+</script>
+<script>
+(function () {
+  var DF = window.DF, S = DF.site;
+  var base = ""; 
+  var logo = '<a class="brand" href="#/" aria-label="Dear Forever home"><span class="brand-text">Dear Forever</span></a>';
+  var links = [["Home", "#/"], ["Invitations", "#invitations"], ["How It Works", "#how-it-works"], ["Contact", "#contact"]];
+  var waIcon = '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C8.84 3 3 8.83 3 16.01c0 2.3.6 4.55 1.74 6.53L3 29l6.62-1.7a13 13 0 0 0 6.4 1.64h.01C23.2 28.94 29 23.1 29 15.93 29 8.83 23.2 3 16.02 3Zm0 23.7h-.01a10.7 10.7 0 0 1-5.45-1.5l-.39-.23-3.93 1.01 1.05-3.83-.25-.4a10.65 10.65 0 0 1-1.64-5.74c0-5.9 4.8-10.7 10.7-10.7 2.86 0 5.54 1.11 7.56 3.14a10.6 10.6 0 0 1 3.13 7.57c0 5.9-4.8 10.68-10.73 10.68Zm5.87-8c-.32-.16-1.9-.94-2.2-1.05-.3-.1-.5-.16-.72.17-.2.32-.83 1.05-1.02 1.26-.19.22-.38.24-.7.08-.33-.16-1.36-.5-2.59-1.6a9.7 9.7 0 0 1-1.79-2.22c-.19-.32 0-.5.14-.66.15-.14.33-.38.5-.57.16-.19.21-.32.32-.54.1-.22.05-.4-.03-.57-.08-.16-.72-1.74-.99-2.38-.26-.62-.52-.54-.72-.55h-.62c-.22 0-.57.08-.87.4-.3.33-1.14 1.11-1.14 2.7s1.17 3.14 1.33 3.36c.16.21 2.3 3.5 5.57 4.9.78.34 1.38.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.62-.38Z"/></svg>';
+  window.DF_WA_ICON = waIcon;
+
+  var header = document.getElementById("site-header");
+  if (header) {
+    header.className = "site-header";
+    header.innerHTML =
+      '<div class="wrap nav">' + logo +
+      '<nav class="nav-links" aria-label="Main">' + links.map(function (l) { return '<a href="' + l[1] + '">' + l[0] + "</a>"; }).join("") + "</nav>" +
+      '<a class="btn btn-gold btn-sm nav-cta" href="#invitations">Explore Designs</a>' +
+      '<button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>' +
+      '<div class="mobile-menu" id="mobile-menu"><div>' + links.map(function (l) { return '<a class="m-link" href="' + l[1] + '">' + l[0] + "</a>"; }).join("") +
+      '<a class="btn btn-gold btn-block m-cta" style="width:auto" href="#invitations">Explore Designs</a></div></div>';
+    var b = document.getElementById("burger"), m = document.getElementById("mobile-menu");
+    b.addEventListener("click", function () {
+      var open = b.getAttribute("aria-expanded") !== "true";
+      b.setAttribute("aria-expanded", String(open));
+      b.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      m.classList.toggle("open", open);
+    });
+    m.addEventListener("click", function (e) { if (e.target.tagName === "A") { b.setAttribute("aria-expanded", "false"); m.classList.remove("open"); } });
+  }
+
+  var footer = document.getElementById("site-footer");
+  if (footer) {
+    footer.className = "site-footer"; footer.id = "contact";
+    footer.innerHTML =
+      '<div class="wrap foot"><div>' + logo + '<p class="tag">' + S.tagline + "</p></div>" +
+      '<nav aria-label="Explore">' + links.map(function (l) { return '<a href="' + l[1] + '">' + l[0] + "</a>"; }).join("") + "</nav>" +
+      '<div class="col"><a href="' + S.instagramUrl + '" target="_blank" rel="noopener noreferrer">Instagram ' + S.instagramHandle + "</a>" +
+      '<a href="mailto:' + S.email + '">' + S.email + "</a>" +
+      '<a href="' + DF.waLink() + '" target="_blank" rel="noopener noreferrer">WhatsApp ' + S.whatsappDisplay + "</a></div>" +
+      '<nav aria-label="Policies"><a href="#/privacy">Privacy Policy</a><a href="#/terms">Terms &amp; Conditions</a><a href="#/refund">Refund &amp; Cancellation Policy</a></nav></div>' +
+      '<div class="copy">\u00A9 ' + new Date().getFullYear() + " Dear Forever</div>";
+  }
+
+  var wa = document.createElement("a");
+  wa.className = "wa-float"; wa.href = DF.waLink(); wa.target = "_blank"; wa.rel = "noopener noreferrer";
+  wa.setAttribute("aria-label", "Chat with Dear Forever on WhatsApp"); wa.innerHTML = waIcon;
+  document.body.appendChild(wa);
+
+  var probe = new Image();
+  probe.onload = function () {
+    document.querySelectorAll(".brand").forEach(function (a) { a.innerHTML = '<img src="' + S.logo + '" alt="Dear Forever" width="160" height="56">'; });
+  };
+  probe.src = S.logo;
+})();
+
+</script>
+<script>
+(function () {
+  var DF = window.DF;
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var grid = document.getElementById("grid"), filtersEl = document.getElementById("filters");
+  var ORDER = ["Floral", "Royal", "Minimal", "Modern", "Traditional"];
+  var styles = ORDER.filter(function (s) { return DF.templates.some(function (t) { return t.styles.indexOf(s) > -1; }); });
+  var filters = [{ id: "all", label: "All Designs" }].concat(styles.map(function (s) { return { id: s, label: s }; }), [{ id: "700", label: "\u20B9700" }, { id: "500", label: "\u20B9500" }]);
+  var current = "all";
+
+  function card(t) {
+    return '<article class="card"><div class="cover">' +
+      '<img src="' + DF.thumb(t.code) + '" alt="' + esc(t.name) + " (" + t.code + ') invitation preview" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="720" height="1280">' +
+      '</div><div class="card-body"><span class="code">' + t.code + "</span><h3>" + esc(t.name) + '</h3><p class="price">' + DF.inr(t.price) + "</p>" +
+      '<div class="card-actions"><button type="button" class="btn btn-gold btn-sm btn-block" data-use="' + t.code + '" aria-label="Use template ' + t.code + '">Use This Template</button>' +
+      '<a class="btn btn-outline btn-sm btn-block" href="' + esc(t.demoUrl) + '" target="_blank" rel="noopener noreferrer" aria-label="View live demo of ' + t.code + '">View Live Demo</a></div></div></article>';
+  }
+
+  function render() {
+    var list = DF.templates.filter(function (t) {
+      if (current === "all") return true;
+      if (current === "700" || current === "500") return t.price === Number(current);
+      return t.styles.indexOf(current) > -1;
+    });
+    grid.innerHTML = list.map(card).join("");
+    grid.querySelectorAll(".cover img").forEach(function (img, i) {
+      img.addEventListener("error", function () {
+        var t = list[i];
+        img.parentNode.innerHTML = '<div class="nothumb"><b>' + t.code + "</b><span>Open the live demo to preview this design</span></div>";
+      });
+    });
+    filtersEl.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-selected", String(c.dataset.f === current)); });
+  }
+
+  filtersEl.innerHTML = filters.map(function (f) { return '<button class="chip" role="tab" data-f="' + f.id + '" aria-selected="false">' + f.label + "</button>"; }).join("");
+  filtersEl.addEventListener("click", function (e) { var c = e.target.closest(".chip"); if (c) { current = c.dataset.f; render(); } });
+
+  grid.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-use]"); if (!b) return;
+    var t = DF.getTemplate(b.dataset.use); if (!t) return;
+    try { localStorage.setItem("df-selected-template", JSON.stringify({ id: t.id, code: t.code, name: t.name, price: t.price, demoUrl: t.demoUrl })); } catch (err) {}
+    location.hash = "#/order/" + encodeURIComponent(t.code);
+  });
+
+  render();
+
+})();
+
+</script>
+<script>
+(function () {
+  var DF = window.DF, Core = window.DFCore;
+  var root = document.getElementById("order-root");
+  
+  // Adjusted to 4 total steps (Skipping Contact Info step)
+  var STEPS = ["Couple", "Wedding", "Words", "Review"];
+  var TITLES = ["Who is getting married?", "When and where?", "Add a personal touch", "Almost done"];
+  var LAST = STEPS.length - 1;
+  var SUGGEST = ["Haldi", "Mehendi", "Sangeet", "Reception", "Other"];
+  var DRAFT_KEY = "df-order-draft", SEL_KEY = "df-selected-template";
+
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var uid = function () { return Math.random().toString(36).slice(2, 10); };
+
+  /* ---- state ---- */
+  var template = null, draft = null, state = null; // selectedFiles state removed
+  
+  function start(code) {
+    template = DF.getTemplate(code);
+    if (template) { try { localStorage.setItem(SEL_KEY, JSON.stringify({ code: template.code })); } catch (e) {} }
+    else { try { template = DF.getTemplate(JSON.parse(localStorage.getItem(SEL_KEY)).code); } catch (e) {} }
+    draft = Core.emptyDraft();
+    try {
+      var saved = JSON.parse(localStorage.getItem(DRAFT_KEY));
+      if (saved) {
+        ["couple", "wedding", "personalization"].forEach(function (g) { Object.assign(draft[g], saved[g] || {}); });
+        if (Array.isArray(saved.events)) draft.events = saved.events;
+      }
+    } catch (e) {}
+    state = { step: 0, errors: {}, submitting: false, orderId: null, submitError: "", focusError: false };
+  }
+  var save = function () { try { localStorage.setItem(DRAFT_KEY, JSON.stringify(draft)); } catch (e) {} };
+  var get = function (p) { var a = p.split("."); return draft[a[0]][a[1]]; };
+  var setVal = function (p, v) { var a = p.split("."); draft[a[0]][a[1]] = v; };
+
+  /* ---- field helpers ---- */
+  function field(path, label, o) {
+    o = o || {};
+    var id = "f_" + path.replace(/\./g, "_"), err = state.errors[path];
+    var attrs = ' id="' + id + '" data-p="' + path + '" class="input' + (err ? " bad" : "") + '"' + (err ? ' aria-invalid="true"' : "");
+    var v = esc(get(path)), ctl;
+    if (o.area) ctl = "<textarea" + attrs + ' rows="' + o.area + '">' + v + "</textarea>";
+    else ctl = "<input" + attrs + ' type="' + (o.type || "text") + '" value="' + v + '"' + (o.inputmode ? ' inputmode="' + o.inputmode + '"' : "") + (o.autocomplete ? ' autocomplete="' + o.autocomplete + '"' : "") + (o.placeholder ? ' placeholder="' + o.placeholder + '"' : "") + ">";
+    return '<div class="field"><label for="' + id + '"><span>' + label + "</span>" + (o.optional ? "<em>Optional</em>" : "") + "</label>" + ctl + (err ? '<p class="err" role="alert">' + esc(err) + "</p>" : "") + "</div>";
+  }
+  function evInput(ev, i, f, type, ph) {
+    var id = "e_" + ev.id + "_" + f, err = state.errors["events." + i + "." + f];
+    return '<input id="' + id + '" data-ev="' + ev.id + '" data-f="' + f + '" class="input' + (err ? " bad" : "") + '" type="' + type + '" value="' + esc(ev[f]) + '"' + (ph ? ' placeholder="' + ph + '"' : "") + ' aria-label="' + (f === "name" ? "Event name" : f === "date" ? "Event date" : "Event time") + '">' +
+      (err ? '<p class="err" role="alert">' + esc(err) + "</p>" : "");
+  }
+
+  /* ---- step views ---- */
+  var views = [
+    function () {
+      return '<div class="row2">' + field("couple.brideName", "Bride's name", { autocomplete: "off" }) + field("couple.groomName", "Groom's name", { autocomplete: "off" }) + "</div>" +
+        '<p class="sub">Parents\u2019 names <em>(optional)</em></p>' +
+        '<div class="row2">' + field("couple.brideFather", "Bride's father") + field("couple.brideMother", "Bride's mother") +
+        field("couple.groomFather", "Groom's father") + field("couple.groomMother", "Groom's mother") + "</div>";
+    },
+    function () {
+      var h = '<div class="row2">' + field("wedding.date", "Wedding date", { type: "date" }) + field("wedding.time", "Wedding time", { type: "time" }) + "</div>" +
+        field("wedding.venueName", "Venue name") + field("wedding.venueAddress", "Venue address", { area: 2 }) +
+        field("wedding.mapsUrl", "Google Maps link", { optional: 1, inputmode: "url", placeholder: "https://maps.app.goo.gl/..." });
+      h += '<p class="sub">Other celebrations <em>(optional)</em></p><div class="sugg">' +
+        SUGGEST.map(function (s) { return '<button type="button" data-add="' + (s === "Other" ? "" : s) + '"' + (draft.events.length >= 12 ? " disabled" : "") + ">+ " + s + "</button>"; }).join("") + "</div>";
+      draft.events.forEach(function (ev, i) {
+        h += '<div class="evrow"><div class="evtop">' + evInput(ev, i, "name", "text", "Event name") + '<button type="button" class="x" data-remove="' + ev.id + '" aria-label="Remove event ' + (i + 1) + '">\u00D7</button></div>' +
+          '<div class="row2 tight"><div>' + evInput(ev, i, "date", "date") + "</div><div>" + evInput(ev, i, "time", "time") + "</div></div></div>";
+      });
+      if (state.errors.events) h += '<p class="err" role="alert">' + esc(state.errors.events) + "</p>";
+      return h;
+    },
+    // Updated: Removed image upload UI & added WhatsApp note
+    function () {
+      return '<p class="sub" style="margin-top:0">Both are optional. Skip if you like.</p>' +
+        field("personalization.coupleStory", "Your story as a couple", { optional: 1, area: 4 }) +
+        field("personalization.message", "Message for your guests", { optional: 1, area: 3 }) +
+        '<div class="note" style="margin-top:1.25rem"><b>Note:</b> You can share your photographs directly with our team on WhatsApp after completing the payment.</div>';
+    },
+    function () {
+      var row = function (k, v) { return '<div class="r"><span>' + k + "</span><span>" + (esc(v) || "\u2014") + "</span></div>"; };
+      var sec = function (title, step, body) { return '<section class="rev"><header><h2>' + title + '</h2><button class="link" type="button" data-goto="' + step + '">Edit</button></header>' + body + "</section>"; };
+      var evs = draft.events.length ? draft.events.map(function (e) { return row(e.name, [e.date, e.time].filter(Boolean).join(", ")); }).join("") : "";
+      return '<section class="rev"><header><h2>' + esc(template.name) + '</h2></header>' + row("Code", template.code) + row("Price", DF.inr(template.price)) + "</section>" +
+        sec("Couple", 0, row("Bride", draft.couple.brideName) + row("Groom", draft.couple.groomName)) +
+        sec("Wedding", 1, row("Date", draft.wedding.date) + row("Time", draft.wedding.time) + row("Venue", draft.wedding.venueName) + evs) +
+        '<div class="total"><span>Total</span><b>' + DF.inr(template.price) + "</b></div>" +
+        '<input class="hp" type="text" id="botcheck" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+        (state.submitError ? '<div class="alert" role="alert">' + esc(state.submitError) + ' <a href="' + DF.waLink("Hello Dear Forever Team! I had trouble submitting my invitation request." + (state.orderId ? " Order ID: " + state.orderId : "")) + '" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></div>' : "");
+    }
+  ];
+
+  /* ---- render ---- */
+  function render(scroll) {
+    if (!template) {
+      root.innerHTML = '<div class="empty-state"><h1>Choose your invitation first</h1><p>Pick a design from the collection and we will bring you back here.</p><a class="btn btn-gold" href="#invitations">Explore Designs</a></div>';
+      return;
+    }
+    
+    var pct = ((state.step + 1) / STEPS.length) * 100;
+    root.innerHTML =
+      '<div class="order" id="top">' +
+      '<div class="sel"><div class="thumb" id="selthumb"><img src="' + DF.thumb(template.code) + '" alt="" width="36" height="60"></div>' +
+      '<div class="mid"><small>' + template.code + "</small><b>" + esc(template.name) + '</b></div>' +
+      '<div class="right"><span class="price serif">' + DF.inr(template.price) + '</span><a href="#invitations">Change</a></div></div>' +
+      '<div class="ptitle"><h1>' + TITLES[state.step] + "</h1><span>" + (state.step + 1) + " / " + STEPS.length + "</span></div>" +
+      '<div class="bar" role="progressbar" aria-valuemin="1" aria-valuemax="' + STEPS.length + '" aria-valuenow="' + (state.step + 1) + '"><i style="width:' + pct + '%"></i></div>' +
+      '<div class="pane' + (scroll ? " enter" : "") + '" id="pane">' + views[state.step]() + "</div></div>" +
+      '<div class="actionbar"><div class="in"><button type="button" class="btn btn-outline" id="back"' + (state.step === 0 || state.submitting ? ' style="visibility:hidden"' : "") + ">Back</button>" +
+      (state.step < LAST ? '<button type="button" class="btn btn-gold" id="next">Continue</button>' : '<button type="button" class="btn btn-gold" id="submit"' + (state.submitting ? " disabled" : "") + ">" + (state.submitting ? "Please wait\u2026" : "Proceed to Payment") + "</button>") + "</div></div>";
+    
+    document.body.classList.add("has-actions");
+    var img = root.querySelector("#selthumb img");
+    if (img) img.addEventListener("error", function () { img.remove(); });
+    if (scroll) { var t = document.getElementById("top"); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    var firstBad = root.querySelector(".input.bad"); if (firstBad && state.focusError) firstBad.focus();
+    state.focusError = false;
+  }
+
+  /* ---- events ---- */
+  root.addEventListener("input", function (e) {
+    var t = e.target;
+    if (t.dataset.p) { setVal(t.dataset.p, t.value); save(); }
+    else if (t.dataset.ev) { var ev = draft.events.filter(function (x) { return x.id === t.dataset.ev; })[0]; if (ev) { ev[t.dataset.f] = t.value; save(); } }
+  });
+  root.addEventListener("change", function (e) {
+    var t = e.target;
+    if (t.dataset.p && t.tagName === "SELECT") { setVal(t.dataset.p, t.value); save(); }
+  });
+  root.addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    if (b.id === "next") return next();
+    if (b.id === "back") { state.errors = {}; state.step = Math.max(0, state.step - 1); return render(true); }
+    if (b.id === "submit") return submit();
+    if (b.dataset.goto !== undefined) { state.step = Number(b.dataset.goto); state.errors = {}; return render(true); }
+    if (b.dataset.add !== undefined) { if (draft.events.length < 12) draft.events.push({ id: uid(), name: b.dataset.add, date: "", time: "" }); save(); return render(false); }
+    if (b.dataset.remove) { draft.events = draft.events.filter(function (x) { return x.id !== b.dataset.remove; }); save(); return render(false); }
+  });
+
+  function next() {
+    var errs = Core.validateStep(state.step, draft);
+    state.errors = errs;
+    if (Object.keys(errs).length) { state.focusError = true; return render(false); }
+    state.step = Math.min(LAST, state.step + 1); render(true);
+  }
+
+  // Core submission automation & instant redirect
+  function submit() {
+    if (state.submitting) return; 
+    var bot = document.getElementById("botcheck");
+    if (bot && bot.value) return; 
+    var errs = Core.validateAll(draft);
+    state.errors = errs;
+    
+    // Check validation
+    if (Object.keys(errs).length) {
+      var map = [["couple.", 0], ["wedding.", 1], ["events", 1]], at = LAST;
+      for (var i = 0; i < map.length; i++) { var hit = Object.keys(errs).some(function (k) { return k.indexOf(map[i][0]) === 0; }); if (hit) { at = map[i][1]; break; } }
+      state.step = at; state.submitError = "Some details need attention before you can continue."; state.focusError = true;
+      return render(true);
+    }
+    
+    if (!state.orderId) state.orderId = Core.generateOrderId();
+    state.submitting = true; state.submitError = ""; render(false);
+    
+    // 1. Prepare Email Receive System Payload (No files anymore, perfectly reliable JSON)
+    var payload = Core.buildPayload(template.code, draft, state.orderId, null);
+
+    // 2. Trigger Email System, then execute CTA Link (Payment)
+    Core.submit(payload).then(function (r) {
+      if (r.ok) {
+          // Success! Clear order memory.
+          try { localStorage.removeItem(DRAFT_KEY); } catch(e){}
+          
+          // Track Sale (Purchase) in Meta Pixel with exact template price (500 or 700 INR)
+          if (typeof fbq === "function") {
+              fbq('track', 'Purchase', {
+                  value: Number(template.price) || 500,
+                  currency: 'INR',
+                  content_name: template.name,
+                  content_ids: [template.code],
+                  content_type: 'product'
+              });
+          }
+
+          // Execute CTA Link: Redirect to Razorpay Checkout (short delay ensures Pixel fires before page unloads)
+          var link = DF.paymentLink(template.price);
+          if (link) {
+              setTimeout(function () {
+                  window.location.href = link;
+              }, 400);
+          } else {
+              state.submitting = false;
+              state.submitError = "Payment link not found. Please contact support on WhatsApp.";
+              render(false);
+          }
+      } else {
+          // Display error safely if email delivery API fails, so it doesn't stay stuck on "processing"
+          state.submitting = false;
+          state.submitError = "Unable to process order data securely. Please try again or contact us via WhatsApp.";
+          render(false);
+      }
+    }).catch(function(err) {
+        // Catch network disconnections
+        state.submitting = false;
+        state.submitError = "Network error. Please check your connection and try again.";
+        render(false);
+    });
+  }
+
+  window.addEventListener("beforeunload", function (e) { if (state && state.submitting) { e.preventDefault(); e.returnValue = ""; } });
+  window.DF_startOrder = function (code) { start(code); render(false); };
+})();
+</script>
+<script>
+document.getElementById("cta-wa").href = DF.waLink();
+</script>
+<script>
+(function () {
+  var home = document.getElementById("home-view"), order = document.getElementById("order-root"), pol = document.getElementById("policy-view");
+  var TITLES = { privacy: "Privacy Policy", terms: "Terms & Conditions", refund: "Refund & Cancellation Policy" };
+  var HOME_TITLE = "Dear Forever | Luxury Digital Wedding Invitations";
+  function show(which) {
+    home.hidden = which !== "home"; order.hidden = which !== "order"; pol.hidden = which !== "policy";
+    if (which !== "order") document.body.classList.remove("has-actions");
+  }
+  function route() {
+    var h = location.hash, m;
+    if (h === "#contact") return; 
+    if ((m = h.match(/^#\/order(?:\/(.*))?$/))) {
+      show("order"); document.title = "Personalize Your Invitation | Dear Forever";
+      window.DF_startOrder(m[1] ? decodeURIComponent(m[1]) : ""); window.scrollTo(0, 0); return;
+    }
+    if ((m = h.match(/^#\/(privacy|terms|refund)$/))) {
+      show("policy"); document.title = TITLES[m[1]] + " | Dear Forever";
+      pol.querySelectorAll("article").forEach(function (a) { a.hidden = a.id !== "policy-" + m[1]; });
+      window.scrollTo(0, 0); return;
+    }
+    var wasHome = !home.hidden;
+    show("home"); document.title = HOME_TITLE;
+    var id = h && h.charAt(1) !== "/" ? h.slice(1) : "", el = id && document.getElementById(id);
+    if (el) { if (!wasHome) el.scrollIntoView(); } else if (!wasHome) window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", route);
+  route();
+})();
+</script>
+</body></html>
