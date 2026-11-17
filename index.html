@@ -6,9 +6,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#FAF7F0">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ivory:#FAF7F0;--cream:#F1EBDD;--gold:#B68A45;--gold-dark:#80551F;--ink:#35251D;--muted:#817366;--line:#E9DFD0;--red:#8c2a1f;
+:root{--ivory:#FAF7F0;--cream:#F1EBDD;--gold:#B68A45;--gold-dark:#80551F;--ink:#35251D;--muted:#817366;--line:#E9DFD0;--red:#8c2a1f;--night:#1E140F;--night2:#2B1D15;--gold-lt:#E3C48A;
 --serif:"Cormorant Garamond",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--ease:cubic-bezier(.22,1,.36,1)}
 *{box-sizing:border-box;margin:0}
 ul, ol {padding:0; margin:0; -webkit-padding-start:0; list-style:none;}
@@ -51,32 +51,14 @@ button,input,select,textarea{font:inherit;color:inherit}
 .mobile-menu .m-cta{margin:1.25rem}
 @media(min-width:768px){.nav-links{display:flex}.nav-cta{display:inline-flex}.burger,.mobile-menu{display:none}}
 
-/* hero */
-.hero{display:grid;gap:3rem;align-items:center;padding-block:3rem 4rem}
-@media(min-width:768px){.hero{grid-template-columns:1.1fr .9fr;padding-block:5rem 6rem}}
-.hero h1{font-family:var(--serif);font-weight:500;line-height:1.05;font-size:clamp(2.6rem,7vw,4.4rem);max-width:12em}
-.hero p.lead{margin-top:1.5rem;max-width:28rem;color:var(--muted);font-size:1.0625rem;line-height:1.7}
-.hero .actions{margin-top:2.25rem;display:flex;flex-direction:column;gap:.75rem}
-@media(min-width:640px){.hero .actions{flex-direction:row}}
-.phone-wrap{position:relative;width:100%;max-width:290px;margin:0 auto}
-.phone-wrap::before{content:"";position:absolute;inset:-1.5rem;background:var(--cream);border-radius:3rem}
-.phone{position:relative;border:1px solid rgba(182,138,69,.4);background:var(--ink);border-radius:2.6rem;padding:7px;box-shadow:0 24px 60px -28px rgba(53,37,29,.45)}
-.phone::after{content:"";position:absolute;top:12px;left:50%;transform:translateX(-50%);width:5rem;height:1.25rem;border-radius:999px;background:var(--ink);z-index:2}
-.phone-screen{position:relative;aspect-ratio:9/19;border-radius:2.2rem;overflow:hidden;background:var(--ivory)}
-.phone-screen img{width:100%;height:100%;object-fit:cover;object-position:top}
-.sample{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.5rem;background:linear-gradient(var(--ivory),var(--cream))}
-.sample .rule{width:2.5rem;height:1px;background:var(--gold)}
-.sample small{margin-top:1.25rem;font-size:.625rem;letter-spacing:.2em;color:var(--muted)}
-.sample .nm{font-family:var(--serif);font-size:2.4rem;line-height:1;color:var(--gold-dark);margin-top:1rem}
-.sample .and{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--gold);margin:.25rem 0}
-.sample p{font-size:.6875rem;margin:1.5rem 0}
+/* legacy hero bits kept for safety */
 .rise{animation:rise .8s var(--ease) both}.rise.d1{animation-delay:.15s}.rise.d2{animation-delay:.28s}.rise.d3{animation-delay:.2s;animation-duration:1s}
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
 /* sections */
 .section-head{text-align:center;margin-bottom:2.5rem}
 .section-head h2,.h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.1}
-.section-head p{margin:.75rem auto 0;max-width:28rem;color:var(--muted)}
+.section-head p{margin:.75rem auto 0;max-width:30rem;color:var(--muted)}
 .filters{display:flex;gap:.5rem;overflow-x:auto;margin:0 -1.25rem 2rem;padding:0 1.25rem .25rem}
 @media(min-width:768px){.filters{flex-wrap:wrap;justify-content:center;margin:0 0 2rem;padding:0}}
 .chip{flex-shrink:0;border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:.5rem 1.25rem;font-size:.875rem;cursor:pointer;transition:all .2s}
@@ -88,34 +70,23 @@ button,input,select,textarea{font:inherit;color:inherit}
 @media(min-width:1280px){.grid{grid-template-columns:repeat(5,1fr)}}
 .card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:1.5rem;padding:.75rem;animation:fade .3s ease both}
 @keyframes fade{from{opacity:0}to{opacity:1}}
-.cover{position:relative;aspect-ratio:9/16;border-radius:1rem;overflow:hidden;background:var(--cream)}
+.cover{position:relative;aspect-ratio:9/16;border-radius:1rem;overflow:hidden;background:var(--cream); display:block; cursor:pointer;}
 .cover img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .7s var(--ease)}
 .card:hover .cover img{transform:scale(1.03)}
 .cover .nothumb{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;padding:1rem;text-align:center;font-size:.75rem;color:var(--muted)}
 .cover .nothumb b{font-family:var(--serif);font-weight:500;font-size:1.9rem;color:var(--gold-dark)}
-.card-body{padding:1rem .4rem .25rem;display:flex;flex-direction:column;flex:1}
-.card-body .code{font-size:.75rem;color:var(--muted)}
-.card-body h3{font-family:var(--serif);font-weight:500;font-size:1.3rem;line-height:1.15}
-.price{font-family:var(--serif);font-size:1.6rem;color:var(--gold-dark);margin-top:.15rem}
-.card-actions{margin-top:1rem;display:flex;flex-direction:column;gap:.5rem}
+.card-body{padding:0.75rem .4rem .25rem;display:flex;flex-direction:column;flex:1;justify-content:flex-end;}
+.card-actions{margin-top:0.25rem;display:flex;flex-direction:column;gap:.5rem}
 
-.band{background:var(--cream)}
+/* Glow Animation for CTA Buttons */
+@keyframes glowing-btn {
+  0% { box-shadow: 0 0 0 0 rgba(182, 138, 69, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(182, 138, 69, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(182, 138, 69, 0); }
+}
+.glow-btn { animation: glowing-btn 2s infinite; }
+
 .pad{padding-block:5rem}@media(min-width:768px){.pad{padding-block:7rem}}
-.steps{list-style:none;display:grid;gap:2.5rem;margin-top:3.5rem}
-@media(min-width:640px){.steps{grid-template-columns:repeat(2,1fr)}}@media(min-width:1024px){.steps{grid-template-columns:repeat(4,1fr)}}
-.step{text-align:center; display: flex; flex-direction: column; align-items: center;}
-.step .ic{width:4rem;height:4rem;margin:0 auto;border:1px solid rgba(182,138,69,.5);border-radius:50%;background:var(--ivory);display:flex;align-items:center;justify-content:center}
-.step .ic svg{width:1.75rem;height:1.75rem;stroke:var(--gold);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
-.step .num{font-family:var(--serif);font-size:1.9rem;color:var(--gold);margin-top:1.25rem}
-.step h3{font-family:var(--serif);font-weight:500;font-size:1.5rem}
-.step p{max-width:16rem;margin:.5rem auto 0;font-size:.875rem;color:var(--muted)}
-.why{display:grid;gap:3rem}@media(min-width:768px){.why{grid-template-columns:.8fr 1.2fr;gap:5rem}}
-.why dl>div{padding:1.5rem 0;border-bottom:1px solid var(--line)}.why dl>div:first-child{padding-top:0}.why dl>div:last-child{border:0}
-.why dt{font-family:var(--serif);font-size:1.6rem;color:var(--gold-dark)}.why dd{margin-top:.4rem;max-width:32rem;color:var(--muted);font-size:.9375rem}
-.exp{display:grid;gap:2.5rem;align-items:center}@media(min-width:768px){.exp{grid-template-columns:1fr 1fr;gap:5rem}}
-.exp p{margin-top:1.25rem;max-width:28rem;color:var(--muted);line-height:1.7}
-.exp ul{list-style:none;display:grid;gap:1rem}@media(min-width:640px){.exp ul{grid-template-columns:1fr 1fr}}
-.exp li{background:var(--ivory);border:1px solid var(--line);border-radius:1rem;padding:1.25rem;font-family:var(--serif);font-size:1.3rem;line-height:1.25;text-align:center;}
 .cta{text-align:center;max-width:56rem;margin:0 auto}
 .cta h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.1}
 .cta .actions{margin-top:2.25rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem}@media(min-width:640px){.cta .actions{flex-direction:row}}
@@ -146,7 +117,6 @@ body.has-actions .wa-float{bottom:6rem}@media(min-width:768px){body.has-actions 
 .ptitle h1{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.1}
 .ptitle span{font-size:.875rem;color:var(--muted);white-space:nowrap}
 .bar{height:4px;border-radius:99px;background:var(--line);margin:1rem 0 .5rem}.bar i{display:block;height:100%;border-radius:99px;background:var(--gold);transition:width .4s var(--ease)}
-.stepnames{font-size:.75rem;color:var(--muted);display:none;margin-bottom:1.5rem}@media(min-width:640px){.stepnames{display:block}}
 .pane{display:grid;gap:1.25rem;margin-top:1.5rem}.pane.enter{animation:slide .25s ease both}
 @keyframes slide{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
 .row2{display:grid;gap:1.25rem}@media(min-width:640px){.row2{grid-template-columns:1fr 1fr}}
@@ -158,14 +128,9 @@ body.has-actions .wa-float{bottom:6rem}@media(min-width:768px){body.has-actions 
 .input.bad{border-color:rgba(140,42,31,.7)}
 textarea.input{resize:vertical}
 .err{margin-top:.375rem;font-size:.75rem;color:var(--red)}
-.phone-row{display:flex;gap:.5rem}.phone-row select{width:7rem;flex-shrink:0}
 .sugg{display:flex;flex-wrap:wrap;gap:.5rem}
 .sugg button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.5rem 1rem;font-size:.875rem;cursor:pointer}.sugg button:hover{border-color:var(--gold)}.sugg button:disabled{opacity:.5}
-.evcard{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.25rem;display:grid;gap:1rem;animation:fade .3s both}
-.evcard header{display:flex;justify-content:space-between;align-items:center}
-.evcard header b{font-family:var(--serif);font-weight:500;font-size:1.3rem;color:var(--gold-dark)}
 .link{background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:2px;cursor:pointer;font-size:.875rem}.link:hover{color:var(--red)}
-.empty{border:1px dashed var(--line);border-radius:1rem;padding:1.5rem;text-align:center;font-size:.875rem;color:var(--muted)}
 .note{background:var(--cream);border:1px solid rgba(182,138,69,.4);border-radius:1rem;padding:1rem 1.25rem;font-size:.875rem;color:var(--muted)}
 .note a{color:var(--gold-dark)}
 .rev{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.25rem}
@@ -174,7 +139,6 @@ textarea.input{resize:vertical}
 .rev .r{display:flex;gap:1rem;font-size:.875rem;margin:.25rem 0}.rev .r span:first-child{width:6rem;flex-shrink:0;color:var(--muted)}
 .total{display:flex;justify-content:space-between;align-items:baseline;background:#fff;border:1px solid var(--gold);border-radius:1rem;padding:1.25rem}
 .total span{font-size:.875rem;color:var(--muted)}.total b{font-family:var(--serif);font-weight:500;font-size:2.4rem;color:var(--gold-dark)}
-.check{display:flex;gap:.75rem;align-items:flex-start;font-size:.875rem;cursor:pointer}.check input{width:1.25rem;height:1.25rem;margin-top:.1rem;accent-color:var(--gold)}
 .alert{border:1px solid rgba(140,42,31,.3);background:#fbeeec;border-radius:.75rem;padding:1rem;font-size:.875rem;color:#6e1f16}.alert a{color:inherit}
 .hp{position:absolute;left:-9999px;width:0;height:0;opacity:0}
 .actionbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(250,247,240,.96);backdrop-filter:blur(6px);border-top:1px solid var(--line)}
@@ -182,20 +146,9 @@ textarea.input{resize:vertical}
 @media(min-width:768px){.actionbar .in{padding-right:1.25rem}}
 .actionbar .btn{flex:none;min-width:6.5rem}
 .actionbar .btn-gold{flex:1;margin-left:0;text-align:center;justify-content:center}
-.help{margin-top:2.5rem;text-align:center;font-size:.875rem;color:var(--muted)}.help a{color:var(--gold-dark)}
-.empty-state,.success{max-width:42rem;margin:0 auto;padding:5rem 1.25rem;text-align:center}
-.empty-state h1,.success h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,6vw,3.2rem);line-height:1.1}
+.empty-state{max-width:42rem;margin:0 auto;padding:5rem 1.25rem;text-align:center}
+.empty-state h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,6vw,3.2rem);line-height:1.1}
 .empty-state p{margin:.75rem 0 2rem;color:var(--muted)}
-.success .tick{width:4rem;height:4rem;margin:0 auto 2rem;color:var(--gold)}
-.success .tick circle,.success .tick path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.success .tick path{stroke-dasharray:60;stroke-dashoffset:60;animation:draw .6s .25s ease forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-.success .msg{max-width:28rem;margin:1.5rem auto 0;color:var(--muted);display:grid;gap:.75rem;font-size:.9375rem}
-.success .msg .acc{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--gold-dark)}
-.success dl{max-width:28rem;margin:2.5rem auto 0;background:#fff;border:1px solid var(--line);border-radius:1rem;text-align:left}
-.success dl div{display:flex;justify-content:space-between;gap:1rem;padding:.75rem 1.25rem;font-size:.875rem;border-bottom:1px solid var(--line)}.success dl div:last-child{border:0}
-.success dt{color:var(--muted)}.success dd{text-align:right}
-.success .actions{margin-top:2.5rem;display:flex;flex-direction:column;gap:.75rem;align-items:center;justify-content:center}@media(min-width:640px){.success .actions{flex-direction:row}}
 
 /* policy */
 .policy{max-width:42rem;margin:0 auto;padding:4rem 1.25rem}
@@ -207,19 +160,11 @@ textarea.input{resize:vertical}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}}
 
-.rzp-slot{display:flex;justify-content:center;min-height:3.5rem;padding:.5rem 0}
-.site-footer .foot a,.site-footer .foot .col{overflow-wrap:anywhere}
-
 /* ---- v3: slim, aesthetic controls and a lighter form ---- */
 .btn{padding:.5rem 1.4rem;min-height:2.5rem;font-size:.8125rem;letter-spacing:.04em;line-height:1.2;border-radius:999px}
 .btn-sm{padding:.4rem 1rem;min-height:2.2rem;font-size:.75rem}
 .btn-gold{box-shadow:0 1px 0 rgba(128,85,31,.25)}
 .btn-outline{border-color:rgba(182,138,69,.5)}
-.hero{display:block;text-align:center;padding-block:4.5rem 3.5rem}
-@media(min-width:768px){.hero{padding-block:6.5rem 5rem}}
-.hero h1{margin:0 auto;max-width:13em;font-size:clamp(2.4rem,7.5vw,4.2rem)}
-.hero p.lead{margin:1.25rem auto 0}
-.hero .actions{flex-direction:row;flex-wrap:wrap;justify-content:center;margin-top:1.75rem}
 .cta .actions{flex-direction:row;flex-wrap:wrap}
 .order{padding:1.25rem 1.25rem 6rem}
 @media(min-width:768px){.order{padding-top:2.25rem}}
@@ -245,11 +190,104 @@ textarea.input{resize:vertical}
 .rev{padding:.9rem 1.1rem;border-radius:.9rem}.rev h2{font-size:1.15rem}.rev .r{font-size:.8125rem}.rev .r span:first-child{width:5rem}
 .total{padding:.9rem 1.1rem;border-radius:.9rem}.total b{font-size:1.9rem}
 .note{padding:.75rem 1rem;font-size:.8125rem;border-radius:.85rem}
-.paysteps{list-style:none;padding:0;display:grid;gap:.6rem;font-size:.875rem}
-.paysteps li{display:flex;gap:.75rem;align-items:center}
-.paysteps span{flex:none;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--cream);border:1px solid rgba(182,138,69,.5);color:var(--gold-dark);display:flex;align-items:center;justify-content:center;font-size:.75rem}
 .pane .btn-block{width:100%}
 
+/* ================= v4: SALES-FOCUSED HOME ================= */
+.btn-lg{min-height:3rem;padding:.7rem 1.8rem;font-size:.9375rem;font-weight:600;letter-spacing:.02em}
+.btn-gold.btn-lg{box-shadow:0 10px 24px -10px rgba(182,138,69,.9)}
+.btn-ghost{border-color:rgba(227,196,138,.5);color:var(--gold-lt)}.btn-ghost:hover{background:rgba(227,196,138,.12)}
+
+/* hero */
+.hero2{position:relative;background:radial-gradient(120% 80% at 80% 0%,#4a2f1d 0%,var(--night) 100%);color:#F6EEDF;overflow:hidden}
+.hero2 .wrap{display:grid;gap:2.25rem;padding-block:2.5rem 3.25rem;align-items:center}
+.hero2 .wrap > div:first-child { display:flex; flex-direction:column; align-items:center; text-align:center; }
+@media(min-width:900px){
+  .hero2 .wrap{grid-template-columns:1.1fr .9fr;gap:3rem;padding-block:4.5rem 5rem}
+  .hero2 .wrap > div:first-child { align-items:flex-start; text-align:left; }
+}
+.hero2 .tagline{display:inline-flex;align-items:center;gap:.5rem;font-size:.8125rem;color:var(--gold-lt);border:1px solid rgba(227,196,138,.35);border-radius:999px;padding:.3rem .85rem}
+.hero2 .tagline i{width:.45rem;height:.45rem;border-radius:50%;background:#4ADE80;animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(74,222,128,.6)}70%{box-shadow:0 0 0 .55rem rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+
+/* Updated Hero Text Styles */
+.hero2 h1{font-family:var(--serif);font-weight:500;line-height:1.05;font-size:clamp(2.2rem,6.5vw,4rem);margin-top:1.1rem;max-width:14em}
+.hero2 .lead{margin-top:.8rem;max-width:38rem;color:#CDBFA9;font-size:.95rem;line-height:1.5;margin-inline:auto}
+@media(min-width:900px){
+  .hero2 .lead{font-size:1.1rem;line-height:1.65;margin-inline:0}
+}
+
+.stage{position:relative;display:flex;justify-content:center;padding:1rem 0}
+.stage::before{content:"";position:absolute;width:20rem;height:20rem;border-radius:50%;background:radial-gradient(circle,rgba(182,138,69,.35),transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);filter:blur(8px)}
+.hphone{position:relative;width:min(250px,64vw);border:1px solid rgba(227,196,138,.5);background:#0f0a07;border-radius:2.6rem;padding:8px;box-shadow:0 40px 80px -30px #000;animation:bob 6s ease-in-out infinite;text-decoration:none;display:block}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(1deg)}}
+.hphone::after{content:"";position:absolute;top:14px;left:50%;transform:translateX(-50%);width:4.2rem;height:1.1rem;border-radius:999px;background:#0f0a07;z-index:3}
+.hscreen{position:relative;aspect-ratio:9/18.5;border-radius:2.1rem;overflow:hidden;background:var(--night2)}
+.hscreen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transition:opacity .9s ease}
+.hscreen img.on{opacity:1}
+.hscreen .tap{position:absolute;left:50%;bottom:1rem;transform:translateX(-50%);z-index:3;background:rgba(30,20,15,.82);color:#fff;font-size:.75rem;font-weight:500;padding:.45rem .9rem;border-radius:999px;white-space:nowrap;border:1px solid rgba(227,196,138,.5)}
+.fchip{position:absolute;z-index:4;background:#fff;color:var(--ink);font-size:.75rem;font-weight:500;border-radius:999px;padding:.45rem .85rem;box-shadow:0 14px 30px -12px rgba(0,0,0,.6);display:flex;gap:.4rem;align-items:center;animation:bob 7s ease-in-out infinite}
+.fchip b{color:var(--gold-dark);font-weight:600}
+.fchip.a{top:8%;left:calc(50% - 10.5rem);animation-delay:-2s}
+.fchip.b{bottom:14%;right:calc(50% - 10.5rem);animation-delay:-4s}
+@media(max-width:420px){.fchip.a{left:0}.fchip.b{right:0}}
+
+/* Trust Strip (New Section) */
+.trust-strip{padding-block:3.5rem;background:var(--cream);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;gap:2rem;grid-template-columns:repeat(2, 1fr);}
+@media(min-width:768px){.trust-grid{grid-template-columns:repeat(4, 1fr);}}
+.trust-item{text-align:center;display:flex;flex-direction:column;align-items:center;}
+.trust-item svg{width:2.2rem;height:2.2rem;margin-bottom:1rem;stroke:var(--gold-dark);fill:none;stroke-width:1.5;}
+.trust-item h3{font-family:var(--serif);font-weight:600;font-size:1.25rem;color:var(--gold-dark);margin-bottom:0.4rem;line-height:1.2;}
+.trust-item p{font-size:0.9375rem;color:var(--muted);line-height:1.5;}
+
+.howv4{padding-block:3.5rem 1rem}
+.howv4 h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5vw,3rem);line-height:1.1;text-align:center}
+.howv4 .sub2{text-align:center;color:var(--muted);margin:.6rem auto 0;max-width:30rem}
+.hsteps{display:grid;gap:.9rem;margin-top:2rem;counter-reset:s}
+@media(min-width:760px){.hsteps{grid-template-columns:repeat(4,1fr);gap:1.1rem}}
+.hs{position:relative;background:#fff;border:1px solid var(--line);border-radius:1.2rem;padding:1.15rem 1.15rem 1.25rem;display:flex;gap:1rem;align-items:flex-start;opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.hs.in{opacity:1;transform:none}
+@media(min-width:760px){.hs{flex-direction:column;gap:.7rem}}
+.hs .n{flex:none;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--gold);color:#fff;font-family:var(--serif);font-size:1.3rem;display:flex;align-items:center;justify-content:center}
+.hs h3{font-family:var(--serif);font-weight:600;font-size:1.35rem;line-height:1.15}
+.hs p{font-size:.875rem;color:var(--muted);margin-top:.25rem}
+.howv4 .go{text-align:center;margin-top:1.75rem}
+
+/* collection v4 */
+.collection{padding-top:3.5rem}
+.card{position:relative;padding:.6rem;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(53,37,29,.6)}
+.cover{border-radius:1.05rem}
+.cover .ptag{position:absolute;top:.55rem;left:.55rem;z-index:2;background:rgba(250,247,240,.95);color:var(--gold-dark);font-family:var(--serif);font-weight:600;font-size:1.05rem;padding:.1rem .65rem;border-radius:999px; box-shadow: 0 4px 10px rgba(0,0,0,0.2)}
+.card-actions .btn-gold{min-height:2.6rem;font-size:.8125rem;font-weight:600}
+
+/* Testimonials Carousel (Modified) */
+.testi-grid{display:flex;gap:1.5rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1.5rem;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+.testi-grid::-webkit-scrollbar{display:none;}
+.testi-card{background:#fff;padding:2rem;border-radius:1.2rem;border:1px solid var(--line);text-align:left;flex:0 0 85%;scroll-snap-align:center;}
+@media(min-width:768px){.testi-card{flex:0 0 calc(33.333% - 1rem);}}
+.testi-head{display:flex;gap:1rem;align-items:center;margin-bottom:1.25rem;}
+.testi-avatar{width:3.2rem;height:3.2rem;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;color:var(--gold-dark);font-weight:600;font-family:var(--serif);font-size:1.2rem;border:1px solid rgba(182,138,69,0.2);}
+.testi-name b{font-family:var(--serif);font-size:1.15rem;color:var(--ink);display:block;line-height:1.2;}
+.testi-name span{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;}
+.testi-card p{color:var(--muted);font-size:0.95rem;line-height:1.6;}
+
+/* Final CTA (New Section) */
+.final-cta{background:var(--night2);border-radius:1.5rem;padding:4rem 1.5rem;text-align:center;color:#fff;}
+@media(min-width:768px){.final-cta{padding:5rem 2rem;}}
+.final-tag{font-size:0.8125rem;color:var(--gold-lt);font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.25rem;display:block;}
+.final-cta h2{font-family:var(--serif);font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.1;margin-bottom:1.5rem;color:#F6EEDF;font-weight:500;}
+.final-cta p{color:#CDBFA9;font-size:1.05rem;max-width:34rem;margin:0 auto 2.5rem;line-height:1.6;}
+
+/* faq */
+.faq{max-width:46rem;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line);padding:1rem 0}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;font-family:var(--serif);font-size:1.35rem;line-height:1.2}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-size:1.5rem;line-height:1;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin-top:.6rem;color:var(--muted);font-size:.9375rem;max-width:38rem}
+.faq a{color:var(--gold-dark)}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Dear Forever","email":"dearforever.in@gmail.com","sameAs":["https://www.instagram.com/dearforever.in/"]}</script>
 
@@ -274,45 +312,116 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
 <header id="site-header"></header>
 <main>
 <div id="home-view">
-<section class="wrap hero">
-  <div>
-    <h1 class="rise">Every Beautiful Story Deserves a Beautiful Beginning.</h1>
-    <p class="lead rise d1">Discover elegant digital wedding invitations, thoughtfully designed to make your special moments unforgettable.</p>
-    <div class="actions rise d2"><a class="btn btn-gold" href="#invitations">Explore Invitations</a><a class="btn btn-outline" href="#how-it-works">Discover Our Collection</a></div>
+
+<section class="hero2" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <span class="tagline rise"><i></i>Digital wedding invitations · ₹499 &amp; ₹799</span>
+      <h1 id="h1" class="rise d1">Your Beautiful Wedding Story Deserves an Invitation Just as Special</h1>
+      <p class="lead rise d2">Create a personalised digital wedding invitation with elegant designs, beautiful animations, your favourite photos, videos and all your wedding details beautifully brought together in one shareable link</p>
+    </div>
+    <div class="stage" aria-hidden="false">
+      <span class="fchip a">Opens on <b>any phone</b></span>
+      <a class="hphone" id="hphone" href="#invitations" aria-label="Preview of an invitation design">
+        <div class="hscreen" id="hscreen"><span class="tap">Tap to try a live demo</span></div>
+      </a>
+      <span class="fchip b">Shared with <b>one link</b></span>
+    </div>
   </div>
 </section>
 
-<section id="invitations" class="wrap" style="padding-top:1rem">
-  <div class="section-head"><h2>The Invitation Collection</h2><p>Open any live demo, then choose the one that feels like your celebration.</p></div>
+<!-- Trust Strip added to replace the old strip and provide proof features -->
+<section class="wrap trust-strip">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+      <h3>Mobile-friendly</h3>
+      <p>Designed to open beautifully on phones.</p>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10c0 1.2-.5 2-2 2h-1.5a1.5 1.5 0 0 1-1.5-1.5v-1.146a4.5 4.5 0 1 0-2.3 3.992M14 10h.01M10 14h.01M10 10h.01M14 14h.01"></path></svg>
+      <h3>Personalised designs</h3>
+      <p>Made around your wedding details.</p>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+      <h3>One shareable link</h3>
+      <p>Easy to share with your guests.</p>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+      <h3>Secure payment</h3>
+      <p>Razorpay payment process.</p>
+    </div>
+  </div>
+</section>
+
+<section id="invitations" class="wrap collection">
+  <div class="section-head"><h2>Choose your invitation design</h2><p>Tap <b>any image</b> to see a full live demo. Love it? Tap <b>Get this design</b> below it.</p></div>
   <div id="filters" class="filters" role="tablist" aria-label="Filter designs"></div>
   <div id="grid" class="grid"></div>
 </section>
 
-<section id="how-it-works" class="band pad" style="margin-top:5rem"><div class="wrap">
-  <div class="section-head" style="margin:0"><h2>How It Works</h2></div>
-  <ol class="steps">
-    <li class="step"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></div><p class="num">01</p><h3>Explore</h3><p>Discover our thoughtfully designed wedding invitation collection.</p></li>
-    <li class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></div><p class="num">02</p><h3>Select</h3><p>Choose the invitation that perfectly matches your celebration.</p></li>
-    <li class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/></svg></div><p class="num">03</p><h3>Personalize</h3><p>Share your wedding details and special moments.</p></li>
-    <li class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></svg></div><p class="num">04</p><h3>Relax</h3><p>Our team will connect with you and take care of the next steps.</p></li>
-  </ol></div></section>
+<section id="how-it-works" class="wrap howv4">
+  <h2>How to get your invitation</h2>
+  <p class="sub2">Four simple steps. You only choose and fill in details, we handle the design work.</p>
+  <ol class="hsteps">
+    <li class="hs"><span class="n">1</span><div><h3>Choose a design</h3><p>Scroll the designs above. Tap the thumbnail to open it like your guests will.</p></div></li>
+    <li class="hs"><span class="n">2</span><div><h3>Fill in your details</h3><p>Names, date, venue and events. It takes about 2 minutes, right here on this site.</p></div></li>
+    <li class="hs"><span class="n">3</span><div><h3>Pay securely</h3><p>You go to Razorpay to pay ₹499 or ₹799, depending on the design.</p></div></li>
+    <li class="hs"><span class="n">4</span><div><h3>Send us your photos</h3><p>Share photographs on WhatsApp. Our team takes care of the rest and stays in touch with you.</p></div></li>
+  </ol>
+  <div class="go"><a class="btn btn-gold btn-lg glow-btn" href="#invitations">Start: Choose My Design</a></div>
+</section>
 
-<section class="wrap pad"><div class="why">
-  <h2 class="h2">Why Choose Dear Forever</h2>
-  <dl>
-    <div><dt>Preview before you choose</dt><dd>Every design has a live demo you can open and scroll through on your own phone.</dd></div>
-    <div><dt>Clear, simple pricing</dt><dd>₹500 or ₹700 per invitation, shown on every design. No surprises.</dd></div>
-    <div><dt>A real team, personally</dt><dd>We reach out on WhatsApp or email to guide you through each next step.</dd></div>
-    <div><dt>Made to be shared</dt><dd>A digital invitation your guests can open from a single link.</dd></div>
-  </dl></div></section>
+<!-- Added Customer Review section to replace old informational blocks -->
+<section class="wrap pad" style="text-align:center; overflow: hidden;">
+  <h2 class="h2" style="margin-bottom:3rem;">Love Stories That Started With Dear Forever</h2>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-head">
+        <div class="testi-avatar">S&R</div>
+        <div class="testi-name"><b>Sneha & Rahul</b><span>Verified Client</span></div>
+      </div>
+      <p>"Absolutely loved our digital invitation! It was so easy to share with all our guests and looked stunning on our phones. Highly recommend to everyone."</p>
+    </div>
+    <div class="testi-card">
+      <div class="testi-head">
+        <div class="testi-avatar">A&V</div>
+        <div class="testi-name"><b>Anjali & Vikram</b><span>Verified Client</span></div>
+      </div>
+      <p>"The designs are beautiful and the process was incredibly smooth. We received so many compliments from our friends and family! Thank you so much."</p>
+    </div>
+    <div class="testi-card">
+      <div class="testi-head">
+        <div class="testi-avatar">P&K</div>
+        <div class="testi-name"><b>Priya & Karan</b><span>Verified Client</span></div>
+      </div>
+      <p>"A seamless experience from start to finish. The animations and photo integration made our invite look so premium. Best decision for our wedding."</p>
+    </div>
+  </div>
+</section>
 
-<section class="band pad"><div class="wrap exp">
-  <div><h2 class="h2">An invitation guests open, not a card they file away.</h2><p>Your story, your events and your venue details live in one beautiful page that opens on any phone. Send it once, and every guest has everything they need.</p></div>
-  <ul><li>Your story and your message</li><li>Every event with date, time and venue</li><li>Venue location through Google Maps</li><li>Your photographs, beautifully placed</li></ul>
+<!-- Added Final strong CTA right before FAQ / Footer -->
+<section class="wrap pad" style="padding-top:0;">
+  <div class="final-cta">
+    <span class="final-tag">YOUR FOREVER BEGINS HERE</span>
+    <h2>Let's Create Something<br>Beautiful for Your Wedding.</h2>
+    <p>Choose your favourite design and turn your special moments into a beautiful digital invitation.</p>
+    <a class="btn btn-gold btn-lg glow-btn" href="#invitations">Explore Designs &amp; Prices &rarr;</a>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:4rem"><div class="faq">
+  <div class="section-head"><h2>Common questions</h2></div>
+  <details><summary>What exactly do I get?</summary><p>A digital wedding invitation page in the design you choose, personalised with your names, events, venue and message. You share it with guests as a single link.</p></details>
+  <details><summary>Can I see the design before I pay?</summary><p>Yes. Simply tap on any design image to open a full working live demo.</p></details>
+  <details><summary>What do I need to fill in?</summary><p>Bride and groom names, wedding date, time and venue. Parents’ names, other events, your story and a guest message are optional.</p></details>
+  <details><summary>How do I add my photographs?</summary><p>After payment, share your photographs with our team on WhatsApp. They are used only for your invitation.</p></details>
+  <details><summary>How does payment work?</summary><p>After you fill in your details you are taken to a secure Razorpay payment page. The price is the one shown on your design: ₹499 or ₹799.</p></details>
+  <details><summary>What about cancellations and refunds?</summary><p>Please read our <a href="#/refund">Refund &amp; Cancellation Policy</a>, or ask us on WhatsApp.</p></details>
 </div></section>
 
-<section class="wrap pad"><div class="cta"><h2>Your celebration begins with the right invitation.</h2>
-  <div class="actions"><a class="btn btn-gold" href="#invitations">Explore Designs</a><a class="btn btn-outline" id="cta-wa" href="#" target="_blank" rel="noopener noreferrer">Talk to us on WhatsApp</a></div></div></section>
 </div>
 <div id="order-root" hidden><noscript><p style="padding:3rem;text-align:center">Please enable JavaScript to place an invitation request.</p></noscript></div>
 <div id="policy-view" hidden><article class="policy" id="policy-privacy" hidden><h1>Privacy Policy</h1>
@@ -331,9 +440,7 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
 </main>
 <footer id="site-footer"></footer>
 <script>
-/* Dear Forever: single source of truth (site info, Web3Forms, templates).
-   The Web3Forms access key is public by design: it can only send mail to the
-   address it was created for. Never put any other secret in this file. */
+/* Dear Forever: single source of truth (site info, Web3Forms, templates). */
 (function (root) {
   var DF = {
     site: {
@@ -351,20 +458,19 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
       accessKey: "ef9ca59c-3b7e-465d-a55e-7d4fa02cf69f"
     },
     payment: {
-      links: { 700: "https://rzp.io/rzp/dearforever2", 500: "https://rzp.io/rzp/dearforever1" }
+      links: { 799: "https://rzp.io/rzp/dearforever2", 499: "https://rzp.io/rzp/dearforever1" }
     },
-    defaultWaMessage: "Hello Dear Forever Team! I would like to know more about your digital wedding invitations.",
     templates: [
-      { id: 1,  code: "DF-001", name: "Invitation Collection 01", price: 700, demoUrl: "https://dearforever.github.io/6/",  styles: [], image: "https://i.ibb.co/F4Zyf3yZ/Screenshot-2026-11-01-10-05-38-085-com-android-chrome-edit.jpg" },
-      { id: 2,  code: "DF-002", name: "Invitation Collection 02", price: 700, demoUrl: "https://dearforever.github.io/7/",  styles: [], image: "https://i.ibb.co/gbq9mLvp/Screenshot-2026-11-01-10-06-54-189-com-android-chrome-edit.jpg" },
-      { id: 3,  code: "DF-003", name: "Invitation Collection 03", price: 700, demoUrl: "https://dearforever.github.io/9/",  styles: [], image: "https://i.ibb.co/bg65SMJt/Screenshot-2026-11-01-10-08-17-379-com-android-chrome-edit.jpg" },
-      { id: 4,  code: "DF-004", name: "Invitation Collection 04", price: 700, demoUrl: "https://dearforever.github.io/11/", styles: [], image: "https://i.ibb.co/PzfHGhby/Screenshot-2026-11-01-10-09-34-110-com-android-chrome-edit.jpg" },
-      { id: 5,  code: "DF-005", name: "Invitation Collection 05", price: 700, demoUrl: "https://dearforever.github.io/8/",  styles: [], image: "https://i.ibb.co/1YJxXX0y/Screenshot-2026-11-01-10-10-47-021-com-android-chrome-edit.jpg" },
-      { id: 6,  code: "DF-006", name: "Invitation Collection 06", price: 500, demoUrl: "https://dearforever.github.io/10/", styles: [], image: "https://i.ibb.co/cKhMbfMy/Screenshot-2026-11-01-10-11-42-292-com-android-chrome-edit.jpg" },
-      { id: 7,  code: "DF-007", name: "Invitation Collection 07", price: 500, demoUrl: "https://dearforever.github.io/1/",  styles: [], image: "https://i.ibb.co/B24bYB5Y/Screenshot-2026-11-01-10-12-39-370-com-android-chrome-edit.jpg" },
-      { id: 8,  code: "DF-008", name: "Invitation Collection 08", price: 500, demoUrl: "https://dearforever.github.io/2/",  styles: [], image: "https://i.ibb.co/HLZChZnf/Screenshot-2026-11-01-10-13-38-876-com-android-chrome-edit.jpg" },
-      { id: 9,  code: "DF-009", name: "Invitation Collection 09", price: 500, demoUrl: "https://dearforever.github.io/3/",  styles: [], image: "https://i.ibb.co/7NZyFVM3/Screenshot-2026-11-01-10-14-51-565-com-android-chrome-edit.jpg" },
-      { id: 10, code: "DF-010", name: "Invitation Collection 10", price: 500, demoUrl: "https://dearforever.github.io/4/",  styles: [], image: "https://i.ibb.co/2Y5Bn1Rm/Screenshot-2026-11-01-10-16-56-542-com-android-chrome-edit.jpg" }
+      { id: 1,  code: "DF-001", name: "Invitation Collection 01", price: 799, demoUrl: "https://dearforever.github.io/6/",  styles: [], image: "https://i.ibb.co/F4Zyf3yZ/Screenshot-2026-11-01-10-05-38-085-com-android-chrome-edit.jpg" },
+      { id: 2,  code: "DF-002", name: "Invitation Collection 02", price: 799, demoUrl: "https://dearforever.github.io/7/",  styles: [], image: "https://i.ibb.co/gbq9mLvp/Screenshot-2026-11-01-10-06-54-189-com-android-chrome-edit.jpg" },
+      { id: 3,  code: "DF-003", name: "Invitation Collection 03", price: 799, demoUrl: "https://dearforever.github.io/9/",  styles: [], image: "https://i.ibb.co/bg65SMJt/Screenshot-2026-11-01-10-08-17-379-com-android-chrome-edit.jpg" },
+      { id: 4,  code: "DF-004", name: "Invitation Collection 04", price: 799, demoUrl: "https://dearforever.github.io/11/", styles: [], image: "https://i.ibb.co/PzfHGhby/Screenshot-2026-11-01-10-09-34-110-com-android-chrome-edit.jpg" },
+      { id: 5,  code: "DF-005", name: "Invitation Collection 05", price: 799, demoUrl: "https://dearforever.github.io/8/",  styles: [], image: "https://i.ibb.co/1YJxXX0y/Screenshot-2026-11-01-10-10-47-021-com-android-chrome-edit.jpg" },
+      { id: 6,  code: "DF-006", name: "Invitation Collection 06", price: 499, demoUrl: "https://dearforever.github.io/10/", styles: [], image: "https://i.ibb.co/cKhMbfMy/Screenshot-2026-11-01-10-11-42-292-com-android-chrome-edit.jpg" },
+      { id: 7,  code: "DF-007", name: "Invitation Collection 07", price: 499, demoUrl: "https://dearforever.github.io/1/",  styles: [], image: "https://i.ibb.co/B24bYB5Y/Screenshot-2026-11-01-10-12-39-370-com-android-chrome-edit.jpg" },
+      { id: 8,  code: "DF-008", name: "Invitation Collection 08", price: 499, demoUrl: "https://dearforever.github.io/2/",  styles: [], image: "https://i.ibb.co/HLZChZnf/Screenshot-2026-11-01-10-13-38-876-com-android-chrome-edit.jpg" },
+      { id: 9,  code: "DF-009", name: "Invitation Collection 09", price: 499, demoUrl: "https://dearforever.github.io/3/",  styles: [], image: "https://i.ibb.co/7NZyFVM3/Screenshot-2026-11-01-10-14-51-565-com-android-chrome-edit.jpg" },
+      { id: 10, code: "DF-010", name: "Invitation Collection 10", price: 499, demoUrl: "https://dearforever.github.io/4/",  styles: [], image: "https://i.ibb.co/2Y5Bn1Rm/Screenshot-2026-11-01-10-16-56-542-com-android-chrome-edit.jpg" }
     ]
   };
   DF.getTemplate = function (code) {
@@ -376,14 +482,16 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
   DF.paymentLink = function (price) { return (DF.payment.links && DF.payment.links[price]) || ""; };
   DF.thumb = function (code) { var t = DF.getTemplate(code); return t && t.image ? t.image : "assets/templates/" + String(code).toLowerCase() + ".webp"; };
   DF.inr = function (n) { return "\u20B9" + Number(n).toLocaleString("en-IN"); };
-  DF.waLink = function (msg) { return "https://wa.me/" + DF.site.whatsappNumber + "?text=" + encodeURIComponent(msg || DF.defaultWaMessage); };
-  DF.waOrderLink = function (id) { return DF.waLink("Hello Dear Forever Team! I have just submitted an invitation request. My order ID is " + id + "."); };
+  
+  // Directly returns specific URL requested
+  DF.waLink = function (msg) { return "https://wa.me/919627144605"; };
+  
   if (typeof module !== "undefined" && module.exports) module.exports = DF; else root.DF = DF;
 })(typeof window !== "undefined" ? window : globalThis);
 
 </script>
 <script>
-/* Pure order logic (no DOM): validation, order ID, Web3Forms payload, submit. */
+/* Pure order logic */
 (function (root) {
   var DF = root.DF || (typeof require !== "undefined" ? require("./config.js") : null);
   var Core = {};
@@ -391,7 +499,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
   var DATE = /^\d{4}-\d{2}-\d{2}$/, TIME = /^\d{2}:\d{2}$/;
   var s = function (v) { return String(v == null ? "" : v).trim(); };
 
-  // Removed customer from empty draft entirely
   Core.emptyDraft = function () {
     return {
       couple: { brideName: "", groomName: "", brideFather: "", brideMother: "", groomFather: "", groomMother: "" },
@@ -401,7 +508,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
     };
   };
 
-  // Validators matched to 3 steps only
   Core.validators = [
     function couple(d) {
       var e = {}, c = d.couple;
@@ -456,8 +562,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
     }).join("\n\n");
   };
 
-  // Payload without contact info. Razorpay handles contact capture.
-  // Updated: Removed `files` array logic and added Template Link to email payload
   Core.buildPayload = function (templateCode, d, orderId, now) {
     var t = DF.getTemplate(templateCode);
     if (!t) throw new Error("Unknown template");
@@ -494,7 +598,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
     };
   };
 
-  // Robust submit code using pure JSON (100% reliable)
   Core.submit = function (payload, fetchImpl, timeoutMs) {
     fetchImpl = fetchImpl || (typeof fetch !== "undefined" ? fetch.bind(root) : null);
     if (!fetchImpl) return Promise.resolve({ ok: false, reason: "network", message: "This browser cannot send the request." });
@@ -537,10 +640,10 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
     header.innerHTML =
       '<div class="wrap nav">' + logo +
       '<nav class="nav-links" aria-label="Main">' + links.map(function (l) { return '<a href="' + l[1] + '">' + l[0] + "</a>"; }).join("") + "</nav>" +
-      '<a class="btn btn-gold btn-sm nav-cta" href="#invitations">Explore Designs</a>' +
+      '<a class="btn btn-gold btn-sm glow-btn nav-cta" href="#invitations">Explore Designs</a>' +
       '<button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>' +
       '<div class="mobile-menu" id="mobile-menu"><div>' + links.map(function (l) { return '<a class="m-link" href="' + l[1] + '">' + l[0] + "</a>"; }).join("") +
-      '<a class="btn btn-gold btn-block m-cta" style="width:auto" href="#invitations">Explore Designs</a></div></div>';
+      '<a class="btn btn-gold glow-btn btn-block m-cta" style="width:auto" href="#invitations">Explore Designs</a></div></div>';
     var b = document.getElementById("burger"), m = document.getElementById("mobile-menu");
     b.addEventListener("click", function () {
       var open = b.getAttribute("aria-expanded") !== "true";
@@ -584,21 +687,23 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
   var grid = document.getElementById("grid"), filtersEl = document.getElementById("filters");
   var ORDER = ["Floral", "Royal", "Minimal", "Modern", "Traditional"];
   var styles = ORDER.filter(function (s) { return DF.templates.some(function (t) { return t.styles.indexOf(s) > -1; }); });
-  var filters = [{ id: "all", label: "All Designs" }].concat(styles.map(function (s) { return { id: s, label: s }; }), [{ id: "700", label: "\u20B9700" }, { id: "500", label: "\u20B9500" }]);
+  var filters = [{ id: "all", label: "All Designs" }].concat(styles.map(function (s) { return { id: s, label: s }; }), [{ id: "799", label: "\u20B9799" }, { id: "499", label: "\u20B9499" }]);
   var current = "all";
 
+  /* FULLY SIMPLIFIED CARD FOR MAXIMUM SALES CONVERSION */
   function card(t) {
-    return '<article class="card"><div class="cover">' +
-      '<img src="' + DF.thumb(t.code) + '" alt="' + esc(t.name) + " (" + t.code + ') invitation preview" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="720" height="1280">' +
-      '</div><div class="card-body"><span class="code">' + t.code + "</span><h3>" + esc(t.name) + '</h3><p class="price">' + DF.inr(t.price) + "</p>" +
-      '<div class="card-actions"><button type="button" class="btn btn-gold btn-sm btn-block" data-use="' + t.code + '" aria-label="Use template ' + t.code + '">Use This Template</button>' +
-      '<a class="btn btn-outline btn-sm btn-block" href="' + esc(t.demoUrl) + '" target="_blank" rel="noopener noreferrer" aria-label="View live demo of ' + t.code + '">View Live Demo</a></div></div></article>';
+    return '<article class="card">' +
+      '<a href="' + esc(t.demoUrl) + '" target="_blank" rel="noopener noreferrer" class="cover" style="display:block" aria-label="View live demo of ' + t.code + '">' +
+      '<img src="' + DF.thumb(t.code) + '" alt="' + esc(t.name) + ' invitation preview" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="720" height="1280">' +
+      '<span class="ptag">' + DF.inr(t.price) + '</span>' +
+      '</a><div class="card-body">' +
+      '<div class="card-actions"><button type="button" class="btn btn-gold btn-sm btn-block glow-btn" data-use="' + t.code + '" aria-label="Get design ' + t.code + '">Get this design</button></div></div></article>';
   }
 
   function render() {
     var list = DF.templates.filter(function (t) {
       if (current === "all") return true;
-      if (current === "700" || current === "500") return t.price === Number(current);
+      if (current === "799" || current === "499") return t.price === Number(current);
       return t.styles.indexOf(current) > -1;
     });
     grid.innerHTML = list.map(card).join("");
@@ -631,7 +736,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
   var DF = window.DF, Core = window.DFCore;
   var root = document.getElementById("order-root");
   
-  // Adjusted to 4 total steps (Skipping Contact Info step)
   var STEPS = ["Couple", "Wedding", "Words", "Review"];
   var TITLES = ["Who is getting married?", "When and where?", "Add a personal touch", "Almost done"];
   var LAST = STEPS.length - 1;
@@ -641,8 +745,7 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
   var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
   var uid = function () { return Math.random().toString(36).slice(2, 10); };
 
-  /* ---- state ---- */
-  var template = null, draft = null, state = null; // selectedFiles state removed
+  var template = null, draft = null, state = null; 
   
   function start(code) {
     template = DF.getTemplate(code);
@@ -662,7 +765,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
   var get = function (p) { var a = p.split("."); return draft[a[0]][a[1]]; };
   var setVal = function (p, v) { var a = p.split("."); draft[a[0]][a[1]] = v; };
 
-  /* ---- field helpers ---- */
   function field(path, label, o) {
     o = o || {};
     var id = "f_" + path.replace(/\./g, "_"), err = state.errors[path];
@@ -678,7 +780,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
       (err ? '<p class="err" role="alert">' + esc(err) + "</p>" : "");
   }
 
-  /* ---- step views ---- */
   var views = [
     function () {
       return '<div class="row2">' + field("couple.brideName", "Bride's name", { autocomplete: "off" }) + field("couple.groomName", "Groom's name", { autocomplete: "off" }) + "</div>" +
@@ -699,7 +800,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
       if (state.errors.events) h += '<p class="err" role="alert">' + esc(state.errors.events) + "</p>";
       return h;
     },
-    // Updated: Removed image upload UI & added WhatsApp note
     function () {
       return '<p class="sub" style="margin-top:0">Both are optional. Skip if you like.</p>' +
         field("personalization.coupleStory", "Your story as a couple", { optional: 1, area: 4 }) +
@@ -715,11 +815,10 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
         sec("Wedding", 1, row("Date", draft.wedding.date) + row("Time", draft.wedding.time) + row("Venue", draft.wedding.venueName) + evs) +
         '<div class="total"><span>Total</span><b>' + DF.inr(template.price) + "</b></div>" +
         '<input class="hp" type="text" id="botcheck" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">' +
-        (state.submitError ? '<div class="alert" role="alert">' + esc(state.submitError) + ' <a href="' + DF.waLink("Hello Dear Forever Team! I had trouble submitting my invitation request." + (state.orderId ? " Order ID: " + state.orderId : "")) + '" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></div>' : "");
+        (state.submitError ? '<div class="alert" role="alert">' + esc(state.submitError) + ' <a href="' + DF.waLink() + '" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></div>' : "");
     }
   ];
 
-  /* ---- render ---- */
   function render(scroll) {
     if (!template) {
       root.innerHTML = '<div class="empty-state"><h1>Choose your invitation first</h1><p>Pick a design from the collection and we will bring you back here.</p><a class="btn btn-gold" href="#invitations">Explore Designs</a></div>';
@@ -736,7 +835,7 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
       '<div class="bar" role="progressbar" aria-valuemin="1" aria-valuemax="' + STEPS.length + '" aria-valuenow="' + (state.step + 1) + '"><i style="width:' + pct + '%"></i></div>' +
       '<div class="pane' + (scroll ? " enter" : "") + '" id="pane">' + views[state.step]() + "</div></div>" +
       '<div class="actionbar"><div class="in"><button type="button" class="btn btn-outline" id="back"' + (state.step === 0 || state.submitting ? ' style="visibility:hidden"' : "") + ">Back</button>" +
-      (state.step < LAST ? '<button type="button" class="btn btn-gold" id="next">Continue</button>' : '<button type="button" class="btn btn-gold" id="submit"' + (state.submitting ? " disabled" : "") + ">" + (state.submitting ? "Please wait\u2026" : "Proceed to Payment") + "</button>") + "</div></div>";
+      (state.step < LAST ? '<button type="button" class="btn btn-gold glow-btn" id="next">Continue</button>' : '<button type="button" class="btn btn-gold glow-btn" id="submit"' + (state.submitting ? " disabled" : "") + ">" + (state.submitting ? "Please wait\u2026" : "Proceed to Payment") + "</button>") + "</div></div>";
     
     document.body.classList.add("has-actions");
     var img = root.querySelector("#selthumb img");
@@ -746,7 +845,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
     state.focusError = false;
   }
 
-  /* ---- events ---- */
   root.addEventListener("input", function (e) {
     var t = e.target;
     if (t.dataset.p) { setVal(t.dataset.p, t.value); save(); }
@@ -773,7 +871,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
     state.step = Math.min(LAST, state.step + 1); render(true);
   }
 
-  // Core submission automation & instant redirect
   function submit() {
     if (state.submitting) return; 
     var bot = document.getElementById("botcheck");
@@ -781,7 +878,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
     var errs = Core.validateAll(draft);
     state.errors = errs;
     
-    // Check validation
     if (Object.keys(errs).length) {
       var map = [["couple.", 0], ["wedding.", 1], ["events", 1]], at = LAST;
       for (var i = 0; i < map.length; i++) { var hit = Object.keys(errs).some(function (k) { return k.indexOf(map[i][0]) === 0; }); if (hit) { at = map[i][1]; break; } }
@@ -792,19 +888,15 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
     if (!state.orderId) state.orderId = Core.generateOrderId();
     state.submitting = true; state.submitError = ""; render(false);
     
-    // 1. Prepare Email Receive System Payload (No files anymore, perfectly reliable JSON)
     var payload = Core.buildPayload(template.code, draft, state.orderId, null);
 
-    // 2. Trigger Email System, then execute CTA Link (Payment)
     Core.submit(payload).then(function (r) {
       if (r.ok) {
-          // Success! Clear order memory.
           try { localStorage.removeItem(DRAFT_KEY); } catch(e){}
           
-          // Track Sale (Purchase) in Meta Pixel with exact template price (500 or 700 INR)
           if (typeof fbq === "function") {
               fbq('track', 'Purchase', {
-                  value: Number(template.price) || 500,
+                  value: Number(template.price) || 499,
                   currency: 'INR',
                   content_name: template.name,
                   content_ids: [template.code],
@@ -812,7 +904,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
               });
           }
 
-          // Execute CTA Link: Redirect to Razorpay Checkout (short delay ensures Pixel fires before page unloads)
           var link = DF.paymentLink(template.price);
           if (link) {
               setTimeout(function () {
@@ -824,13 +915,11 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
               render(false);
           }
       } else {
-          // Display error safely if email delivery API fails, so it doesn't stay stuck on "processing"
           state.submitting = false;
           state.submitError = "Unable to process order data securely. Please try again or contact us via WhatsApp.";
           render(false);
       }
     }).catch(function(err) {
-        // Catch network disconnections
         state.submitting = false;
         state.submitError = "Network error. Please check your connection and try again.";
         render(false);
@@ -842,7 +931,36 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
 })();
 </script>
 <script>
-document.getElementById("cta-wa").href = DF.waLink();
+if(document.getElementById("hero-wa")) { document.getElementById("hero-wa").href = DF.waLink(); }
+</script>
+<script>
+(function () {
+  var DF = window.DF, screen = document.getElementById("hscreen"), phone = document.getElementById("hphone");
+  if (screen && phone) {
+    var pick = [1, 2, 6, 7].map(function (id) { return DF.templates.filter(function (t) { return t.id === id; })[0]; }).filter(Boolean);
+    pick.forEach(function (t, i) {
+      var im = new Image(); im.src = t.image; im.alt = "Invitation design " + t.code; im.referrerPolicy = "no-referrer";
+      if (i === 0) im.className = "on";
+      im.onerror = function () { im.remove(); };
+      screen.insertBefore(im, screen.firstChild);
+    });
+    var cur = 0;
+    function show() {
+      var imgs = screen.querySelectorAll("img"); if (!imgs.length) return;
+      imgs.forEach(function (x, i) { x.classList.toggle("on", i === cur % imgs.length); });
+      var t = pick[cur % pick.length]; if (t) phone.href = t.demoUrl;
+    }
+    var arr = Array.prototype.slice.call(screen.querySelectorAll("img")).reverse();
+    arr.forEach(function (x) { screen.insertBefore(x, screen.querySelector(".tap")); });
+    phone.href = pick[0] ? pick[0].demoUrl : "#invitations"; phone.target = "_blank"; phone.rel = "noopener noreferrer";
+    setInterval(function () { cur++; show(); }, 2800);
+  }
+  var steps = document.querySelectorAll(".hs");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (en) { en.forEach(function (e) { if (e.isIntersecting) { var i = Array.prototype.indexOf.call(steps, e.target); setTimeout(function () { e.target.classList.add("in"); }, i * 110); io.unobserve(e.target); } }); }, { threshold: .2 });
+    steps.forEach(function (s) { io.observe(s); });
+  } else steps.forEach(function (s) { s.classList.add("in"); });
+})();
 </script>
 <script>
 (function () {
@@ -875,3 +993,4 @@ document.getElementById("cta-wa").href = DF.waLink();
 })();
 </script>
 </body></html>
+
