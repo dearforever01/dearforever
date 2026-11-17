@@ -231,7 +231,7 @@ textarea.input{resize:vertical}
 .fchip.b{bottom:14%;right:calc(50% - 10.5rem);animation-delay:-4s}
 @media(max-width:420px){.fchip.a{left:0}.fchip.b{right:0}}
 
-/* Trust Strip (New Section) */
+/* Trust Strip */
 .trust-strip{padding-block:3.5rem;background:var(--cream);border-bottom:1px solid var(--line)}
 .trust-grid{display:grid;gap:2rem;grid-template-columns:repeat(2, 1fr);}
 @media(min-width:768px){.trust-grid{grid-template-columns:repeat(4, 1fr);}}
@@ -261,18 +261,50 @@ textarea.input{resize:vertical}
 .cover .ptag{position:absolute;top:.55rem;left:.55rem;z-index:2;background:rgba(250,247,240,.95);color:var(--gold-dark);font-family:var(--serif);font-weight:600;font-size:1.05rem;padding:.1rem .65rem;border-radius:999px; box-shadow: 0 4px 10px rgba(0,0,0,0.2)}
 .card-actions .btn-gold{min-height:2.6rem;font-size:.8125rem;font-weight:600}
 
-/* Testimonials Carousel (Modified) */
-.testi-grid{display:flex;gap:1.5rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1.5rem;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+/* Screenshot Image Testimonials (Updated for perfect alignment & curved corners) */
+.testi-grid{
+  display:flex;
+  gap:1.25rem;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding-bottom:2rem;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+  margin:0 -1.25rem;
+  padding-inline:1.25rem;
+  align-items:center; /* Perfectly aligns items vertically */
+}
 .testi-grid::-webkit-scrollbar{display:none;}
-.testi-card{background:#fff;padding:2rem;border-radius:1.2rem;border:1px solid var(--line);text-align:left;flex:0 0 85%;scroll-snap-align:center;}
-@media(min-width:768px){.testi-card{flex:0 0 calc(33.333% - 1rem);}}
-.testi-head{display:flex;gap:1rem;align-items:center;margin-bottom:1.25rem;}
-.testi-avatar{width:3.2rem;height:3.2rem;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;color:var(--gold-dark);font-weight:600;font-family:var(--serif);font-size:1.2rem;border:1px solid rgba(182,138,69,0.2);}
-.testi-name b{font-family:var(--serif);font-size:1.15rem;color:var(--ink);display:block;line-height:1.2;}
-.testi-name span{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;}
-.testi-card p{color:var(--muted);font-size:0.95rem;line-height:1.6;}
+@media(min-width:768px){
+  .testi-grid{margin:0; padding-inline:0;}
+}
 
-/* Final CTA (New Section) */
+.testi-card{
+  background:#fff;
+  border-radius:1.5rem; /* Outer curve */
+  border:1px solid var(--line);
+  overflow:hidden;
+  flex:0 0 65%;
+  max-width:320px;
+  scroll-snap-align:center;
+  box-shadow:0 12px 28px -12px rgba(53,37,29,0.15); /* Soft shadow */
+  transition: transform 0.3s ease;
+}
+.testi-card:hover {
+  transform: translateY(-4px); /* Slight lift on hover */
+}
+@media(min-width:640px){.testi-card{flex:0 0 40%;}}
+@media(min-width:900px){.testi-card{flex:0 0 22%;}}
+
+.testi-card img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+  border-radius:1.5rem; /* Ensures the image exactly fits the curved card */
+}
+
+/* Final CTA */
 .final-cta{background:var(--night2);border-radius:1.5rem;padding:4rem 1.5rem;text-align:center;color:#fff;}
 @media(min-width:768px){.final-cta{padding:5rem 2rem;}}
 .final-tag{font-size:0.8125rem;color:var(--gold-lt);font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.25rem;display:block;}
@@ -330,7 +362,7 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- Trust Strip added to replace the old strip and provide proof features -->
+<!-- Trust Strip -->
 <section class="wrap trust-strip">
   <div class="trust-grid">
     <div class="trust-item">
@@ -374,35 +406,19 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
   <div class="go"><a class="btn btn-gold btn-lg glow-btn" href="#invitations">Start: Choose My Design</a></div>
 </section>
 
-<!-- Added Customer Review section to replace old informational blocks -->
+<!-- Screenshot Image Testimonials -->
 <section class="wrap pad" style="text-align:center; overflow: hidden;">
   <h2 class="h2" style="margin-bottom:3rem;">Love Stories That Started With Dear Forever</h2>
   <div class="testi-grid">
-    <div class="testi-card">
-      <div class="testi-head">
-        <div class="testi-avatar">S&R</div>
-        <div class="testi-name"><b>Sneha & Rahul</b><span>Verified Client</span></div>
-      </div>
-      <p>"Absolutely loved our digital invitation! It was so easy to share with all our guests and looked stunning on our phones. Highly recommend to everyone."</p>
-    </div>
-    <div class="testi-card">
-      <div class="testi-head">
-        <div class="testi-avatar">A&V</div>
-        <div class="testi-name"><b>Anjali & Vikram</b><span>Verified Client</span></div>
-      </div>
-      <p>"The designs are beautiful and the process was incredibly smooth. We received so many compliments from our friends and family! Thank you so much."</p>
-    </div>
-    <div class="testi-card">
-      <div class="testi-head">
-        <div class="testi-avatar">P&K</div>
-        <div class="testi-name"><b>Priya & Karan</b><span>Verified Client</span></div>
-      </div>
-      <p>"A seamless experience from start to finish. The animations and photo integration made our invite look so premium. Best decision for our wedding."</p>
-    </div>
+    <div class="testi-card"><img src="https://i.ibb.co/bgdBnFcn/IMG-20261117-235557.png" alt="Customer Review 1" loading="lazy"></div>
+    <div class="testi-card"><img src="https://i.ibb.co/Q3SbPsHP/IMG-20261117-235622.png" alt="Customer Review 2" loading="lazy"></div>
+    <div class="testi-card"><img src="https://i.ibb.co/qFnF4jjn/IMG-20261117-235653.png" alt="Customer Review 3" loading="lazy"></div>
+    <div class="testi-card"><img src="https://i.ibb.co/JwtpT9Nv/IMG-20261117-235738.png" alt="Customer Review 4" loading="lazy"></div>
+    <div class="testi-card"><img src="https://i.ibb.co/zh2WS6nF/IMG-20261117-235810.png" alt="Customer Review 5" loading="lazy"></div>
   </div>
 </section>
 
-<!-- Added Final strong CTA right before FAQ / Footer -->
+<!-- Final strong CTA -->
 <section class="wrap pad" style="padding-top:0;">
   <div class="final-cta">
     <span class="final-tag">YOUR FOREVER BEGINS HERE</span>
@@ -501,7 +517,7 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
 
   Core.emptyDraft = function () {
     return {
-      couple: { brideName: "", groomName: "", brideFather: "", brideMother: "", groomFather: "", groomMother: "" },
+      couple: { phone: "", brideName: "", groomName: "", brideFather: "", brideMother: "", groomFather: "", groomMother: "" },
       wedding: { date: "", time: "", venueName: "", venueAddress: "", mapsUrl: "" },
       events: [],
       personalization: { coupleStory: "", message: "" }
@@ -511,6 +527,8 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
   Core.validators = [
     function couple(d) {
       var e = {}, c = d.couple;
+      var phoneVal = s(c.phone).replace(/\D/g, ""); // Check digits only
+      if (!phoneVal || phoneVal.length !== 10) e["couple.phone"] = "Enter a valid 10-digit WhatsApp number";
       if (!s(c.brideName)) e["couple.brideName"] = "Bride's full name is required";
       if (!s(c.groomName)) e["couple.groomName"] = "Groom's full name is required";
       return e;
@@ -582,6 +600,7 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
       "Template Code": t.code,
       "Template Price": DF.inr(t.price),
       "Template Link": t.demoUrl,
+      "Customer Phone": s(c.phone),
       "Bride Full Name": s(c.brideName),
       "Groom Full Name": s(c.groomName),
       "Bride's Parents": parents(c.brideFather, c.brideMother),
@@ -771,7 +790,7 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
     var attrs = ' id="' + id + '" data-p="' + path + '" class="input' + (err ? " bad" : "") + '"' + (err ? ' aria-invalid="true"' : "");
     var v = esc(get(path)), ctl;
     if (o.area) ctl = "<textarea" + attrs + ' rows="' + o.area + '">' + v + "</textarea>";
-    else ctl = "<input" + attrs + ' type="' + (o.type || "text") + '" value="' + v + '"' + (o.inputmode ? ' inputmode="' + o.inputmode + '"' : "") + (o.autocomplete ? ' autocomplete="' + o.autocomplete + '"' : "") + (o.placeholder ? ' placeholder="' + o.placeholder + '"' : "") + ">";
+    else ctl = "<input" + attrs + ' type="' + (o.type || "text") + '" value="' + v + '"' + (o.inputmode ? ' inputmode="' + o.inputmode + '"' : "") + (o.autocomplete ? ' autocomplete="' + o.autocomplete + '"' : "") + (o.placeholder ? ' placeholder="' + o.placeholder + '"' : "") + (o.maxlength ? ' maxlength="' + o.maxlength + '"' : "") + ">";
     return '<div class="field"><label for="' + id + '"><span>' + label + "</span>" + (o.optional ? "<em>Optional</em>" : "") + "</label>" + ctl + (err ? '<p class="err" role="alert">' + esc(err) + "</p>" : "") + "</div>";
   }
   function evInput(ev, i, f, type, ph) {
@@ -782,7 +801,8 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
 
   var views = [
     function () {
-      return '<div class="row2">' + field("couple.brideName", "Bride's name", { autocomplete: "off" }) + field("couple.groomName", "Groom's name", { autocomplete: "off" }) + "</div>" +
+      return '<div style="margin-bottom:1.25rem;">' + field("couple.phone", "Phone / WhatsApp number", { type: "tel", placeholder: "10-digit mobile number", inputmode: "numeric", maxlength: "10" }) + '</div>' +
+        '<div class="row2">' + field("couple.brideName", "Bride's name", { autocomplete: "off" }) + field("couple.groomName", "Groom's name", { autocomplete: "off" }) + "</div>" +
         '<p class="sub">Parents\u2019 names <em>(optional)</em></p>' +
         '<div class="row2">' + field("couple.brideFather", "Bride's father") + field("couple.brideMother", "Bride's mother") +
         field("couple.groomFather", "Groom's father") + field("couple.groomMother", "Groom's mother") + "</div>";
@@ -811,7 +831,7 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
       var sec = function (title, step, body) { return '<section class="rev"><header><h2>' + title + '</h2><button class="link" type="button" data-goto="' + step + '">Edit</button></header>' + body + "</section>"; };
       var evs = draft.events.length ? draft.events.map(function (e) { return row(e.name, [e.date, e.time].filter(Boolean).join(", ")); }).join("") : "";
       return '<section class="rev"><header><h2>' + esc(template.name) + '</h2></header>' + row("Code", template.code) + row("Price", DF.inr(template.price)) + "</section>" +
-        sec("Couple", 0, row("Bride", draft.couple.brideName) + row("Groom", draft.couple.groomName)) +
+        sec("Couple", 0, row("Phone", draft.couple.phone) + row("Bride", draft.couple.brideName) + row("Groom", draft.couple.groomName)) +
         sec("Wedding", 1, row("Date", draft.wedding.date) + row("Time", draft.wedding.time) + row("Venue", draft.wedding.venueName) + evs) +
         '<div class="total"><span>Total</span><b>' + DF.inr(template.price) + "</b></div>" +
         '<input class="hp" type="text" id="botcheck" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">' +
@@ -906,6 +926,7 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
 
           var link = DF.paymentLink(template.price);
           if (link) {
+              state.submitting = false;
               setTimeout(function () {
                   window.location.href = link;
               }, 400);
@@ -926,7 +947,6 @@ src="https://www.facebook.com/tr?id=28803610362653553&ev=PageView&noscript=1"
     });
   }
 
-  window.addEventListener("beforeunload", function (e) { if (state && state.submitting) { e.preventDefault(); e.returnValue = ""; } });
   window.DF_startOrder = function (code) { start(code); render(false); };
 })();
 </script>
